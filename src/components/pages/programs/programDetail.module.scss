@@ -1,0 +1,57 @@
+.programDetails{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 5% 90% 5%;
+
+    .programHeader{
+        align-content: center;
+    }
+
+    .programBody{
+        overflow-x: scroll;
+
+        .programList{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+
+            li{
+                width: 100%;
+            }
+
+            ul{
+                list-style-image: url('/weight.svg');
+                padding: 5px;
+
+                li {
+                    position: relative;
+                    padding-left: 20px;
+                    height: 50px;
+                    width: 80%;
+                    margin: 0 auto;
+                    border: 1px solid red;
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    margin-bottom: 5px;
+                }
+
+                li::before {
+                    content: "";
+                    width: 15px;
+                    height: 15px;
+                    background-image: url('/weight.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+
+    }
+
+    .programTabs{
+        align-content: center;
+    }
+}

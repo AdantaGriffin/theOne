@@ -1,0 +1,75 @@
+@mixin h2{
+    font-size: 40px;
+}
+@mixin p{
+    font-size: 25px;
+}
+@mixin header{
+    color: #f90101;
+    font-size: 30px;
+    align-content: center;
+    padding: 0 20px;
+}
+@mixin list{
+    border: 1px solid red;
+    &:hover{
+        opacity: .6;
+    }
+}
+@mixin button{
+    background-color: #d62828;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px black;
+    text-decoration: none;
+    padding: 10px 40px;
+    &:hover{
+        box-shadow: inset 1px 1px 10px black;
+    }
+}
+
+@mixin tabs{
+    color: #d62828;
+    align-content: center;
+    border-radius: 15px;
+    overflow: hidden; 
+    width: 90%;
+    margin: auto;
+}
+
+.navigation{
+    @include tabs;
+    .navigationList{
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        li{
+            width: 33%;
+            border: 1px solid white;
+            height: 100%;
+            align-content: center; 
+            text-align: center;
+            &:hover{
+            border-radius: 15px;
+                background-color: #f7abab;
+                border-radius:initial;
+                width: 35%;
+            }
+        }
+        a{
+            color: #d62828;
+            text-decoration: none;
+            display: block;
+            line-height: .1;
+            img{
+                position: relative;
+                top: 6px;
+            }
+        }
+    }
+    
+}

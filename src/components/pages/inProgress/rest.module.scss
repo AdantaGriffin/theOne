@@ -1,0 +1,24 @@
+@use '../../mixins' as *;
+
+.rest{
+    border: 1px solid red;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+
+    .header, .clock, .restButtons{
+        border: 1px solid green;
+        align-content: center;
+        text-align: center;
+    }
+
+    .restButtons{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        a, div{
+            @include button;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@use '../../mixins' as *;
+
+.exercise{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 5% 5% 85% 5%;
+    
+    header{
+        align-content: center;
+    }
+
+    .navigation{
+        align-content: center;
+
+        .navigationList{
+            @include exerciseNav;
+        }
+    }
+
+    .exerciseList{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow-x: scroll;
+
+        .exerciseCard{
+            border: 1px solid black;
+            width: 95%;
+            height: 45px;
+            margin: 10px auto;
+            border-radius: 15px;
+            
+            a{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                color: black;
+                text-decoration: none;
+            }
+
+        }
+    }
+}

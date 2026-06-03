@@ -1,0 +1,112 @@
+@use '../../mixins' as *;
+
+.summary{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 90%;
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+
+        .back{
+            align-content: center;
+            text-align: center;
+            button{
+                border: none;
+                background: transparent;
+            }
+            img{
+                height: 30px;
+                width: 30px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .headerTitle{
+            height: 100%;
+            width: 80%;
+            align-content: center;
+
+        }
+    }
+
+    .body{
+        display: grid;
+        grid-template-rows: 30% 50% 10%;
+
+        .image{
+            border: 1px solid black;
+            border-radius: 15px;
+            width: 90%;
+            height: 90%;
+            margin: auto;
+            align-content: center;
+            text-align: center;
+        }
+
+        .stats{
+            border: 1px solid grey;
+            border-radius: 15px;
+            padding: 5px;
+            width: 80%;
+            height: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-rows: 10% 90%;
+            .header{
+                display: block;
+                height: 50px;
+                .name{
+                    font-size: 18px;
+                }
+                .date{
+                    font-size: 14px;
+                }
+                p{
+                    line-height: .1;
+                }
+            }
+            .statsData{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 5px;
+
+                div{
+                }
+
+                .statEx{
+                    width: 100%;
+                    align-content: center;
+                    border-bottom: 1px solid black;
+                }
+                .statTot{
+                    width: 49%;
+                    align-content: center;
+                    text-align: center;
+                    border-right: 1px solid black;
+                }
+                .statReps{
+                    width: 49%;
+                    align-content: center;
+                    text-align: center;
+                }
+                .statGoal{
+                    border-top: 1px solid black;
+                    width: 100%;
+                    align-content: center;
+                    text-align: center
+                }
+            }
+        }
+        .finish{
+            @include button;
+        }
+    }
+
+}

@@ -1,0 +1,5 @@
+@use '../mixins' as *;
+
+.tabs{
+    @include tabs;
+}

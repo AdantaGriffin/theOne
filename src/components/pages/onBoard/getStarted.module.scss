@@ -1,0 +1,40 @@
+@use '../../mixins' as *;
+
+.obStart{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+.image{
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+.body{
+    display: grid;
+    grid-template-rows: 40% 40% 20%;
+
+    .main, .sub{
+        text-align: center;
+    }
+
+    .heading{
+        display: grid;
+        input{
+            width: 55%;
+            border-radius: 10px;
+            padding: 5px 20px;
+            font-size: 16px;
+            margin: auto;
+        }
+    }
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+
+    .getStarted{
+        @include button;
+    }
+}

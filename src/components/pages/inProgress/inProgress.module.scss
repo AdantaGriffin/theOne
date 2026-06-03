@@ -1,0 +1,49 @@
+@use '../../mixins' as *;
+
+.inProgress{
+    border: 1px solid red;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 90%;
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+
+        .back{
+            border: 1px solid red;
+            align-content: center;
+            text-align: center;
+            button{
+                border: none;
+                background: transparent;
+            }
+            img{
+                height: 30px;
+                width: 30px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .body{
+        display: grid;
+        grid-template-rows: 15% 30% 25% 15% 15%;
+
+        .name, .image, .rep, a{
+            border: 1px solid black;
+            align-content: center;
+            text-align: center;
+        }
+
+        .done, .rest{
+            @include button;
+        }
+
+    }
+}

@@ -1,0 +1,34 @@
+@use '../../mixins' as *;
+
+.onBoard{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+.image{
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+.body{
+    display: grid;
+    grid-template-rows: 40% 40% 20%;
+    .main, .sub{
+        text-align: center;
+    }
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .skip{
+        text-decoration: none;
+        color: grey;
+    }
+    .next{
+        @include primaryColor;
+        text-decoration: none;
+    }
+}
