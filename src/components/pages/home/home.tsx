@@ -93,10 +93,9 @@ function Home(){
                     <div className={styles.userLink}>
                         <Link to="/difficulty">START NEW SESSION</Link>
                     </div>
-
-                    <Navigation/>
                 </div>
                 
+                <Navigation/>
             </section>
         </>
     )

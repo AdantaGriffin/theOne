@@ -1,19 +1,7 @@
+@use '../mixins' as *;
+
 .root{
-    border: 1px solid black;
     height: 100vh;
     overflow-x: scroll;
     padding: 10px;
-}
-@mixin primaryColor{
-    color: #f90101;
-}
-
-@mixin button{
-    background-color: #d62828;
-    border-radius: 15px;
-}
-
-@mixin tabs{
-    background-color: #d62828;
-    border-radius: 15px;
 }

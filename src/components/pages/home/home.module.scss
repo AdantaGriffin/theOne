@@ -4,11 +4,7 @@
     width: 80%;
 }
 .home{
-    height: fit-content;
-
     display: grid;
-    grid-template-rows: 10% 90%;
-
     .header{
         @include header;
     }

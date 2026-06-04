@@ -1,0 +1,45 @@
+.profile{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 20% 5% 70% 5%;
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .name{
+            line-height: .1;
+
+            .userName{
+                font-size: 25px;
+            }
+        }
+    }
+    .details{
+        align-content: center;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .list{
+        border: 1px solid black;
+
+        .profileList{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+
+            li{
+                border-bottom: 1px solid black;
+                height: 40px;
+                align-content: center;
+                padding: 0 20px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
