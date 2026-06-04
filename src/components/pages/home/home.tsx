@@ -1,5 +1,4 @@
 import styles from './home.module.scss';
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Tabs from '../../tabs/tabs';
 import Navigation from '../../navigation/navigation';

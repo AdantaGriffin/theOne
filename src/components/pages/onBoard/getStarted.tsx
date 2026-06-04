@@ -1,6 +1,5 @@
 import styles from './getStarted.module.scss';
 import { Link } from 'react-router-dom';
-import { useApi } from '../../api/api';
 
 function ObStart(){
     

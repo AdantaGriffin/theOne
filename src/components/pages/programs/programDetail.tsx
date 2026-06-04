@@ -1,6 +1,5 @@
 import styles from './programDetail.module.scss';
 import { useParams } from 'react-router-dom';
-import Tabs from '../../tabs/tabs';
 import Navigation from '../../navigation/navigation';
 
 function ProgramDetails(){
