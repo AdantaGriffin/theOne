@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 
 function ObStart(){
     
-    console.log(name)
     return(
         <>
             <section className={styles.obStart}>
 
                 <div className={styles.image}>
-                    <img src="./public/onBoard3.jpg" alt="on board image 3"/>
+                    <img src="./onBoard3.jpg" alt="on board image 3"/>
                 </div>
 
                 <div className={styles.body}>
