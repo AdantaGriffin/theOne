@@ -1,20 +1,28 @@
 import styles from './results.module.scss';
-
-import { Link } from 'react-router-dom';
+import Navigation from '../../navigation/navigation';
 
 function Results(){
     return(
         <>
             <section className={styles.results}>
-                <div>header</div>
-                <div>nav filter</div>
-                <div>frequency graph</div>
-                <div>muscle group breakdown</div>
-                <div>
-                    <ul>
-                        <Link to="/home"></Link>
-                    </ul>
-                </div>
+
+                <header>PROGRESS</header>
+
+                <ul className={styles.progressList}>
+                    <li>week</li>
+                    <li>month</li>
+                    <li>year</li>
+                    <li>reps</li>
+                    <li>sets</li>
+
+                </ul>
+
+                <div className={styles.frequencyGraph}>frequency graph</div>
+
+                <div className={styles.chart}>muscle group breakdown</div>
+
+                <Navigation/>
+
             </section>
         </>
     )

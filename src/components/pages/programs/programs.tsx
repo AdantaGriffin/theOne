@@ -6,7 +6,9 @@ function Programs(){
     return(
         <>
             <section className={styles.programs}>
+
                 <header>PROGRAMS</header>
+
                 <nav className={styles.navigation}>
                     <ul className={styles.navigationList}>
                         <li><NavLink to="">all</NavLink></li>
@@ -16,6 +18,7 @@ function Programs(){
                         <li><NavLink to="">squat</NavLink></li>
                     </ul>
                 </nav>
+
                 <ul className={styles.programsList}>
                     <li className={styles.programsCard}>
                         <Link className={styles.programsLink} to="/programDetails/:deets">
@@ -24,6 +27,7 @@ function Programs(){
                         </Link>
                     </li>
                 </ul>
+                
                 <Navigation/>
             </section>
         </>

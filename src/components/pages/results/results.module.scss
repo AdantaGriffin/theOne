@@ -1,0 +1,33 @@
+.results{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 5% 10% 40% 40% 5%;
+
+    header{
+        align-content: center;
+    }
+
+    .progressList{
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0;
+        margin: 0;
+        li{
+            height: 30px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 0 20px;
+            align-content: center;
+        }
+    }
+
+    .frequencyGraph{
+        border: 1px solid red;
+        align-content: center;
+    }
+    .chart{
+        border: 1px solid blue;
+        align-content: center;
+    }
+}
