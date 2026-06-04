@@ -20,7 +20,7 @@ function OnBoard(){
                         <p className={styles.sub}>Track your works outs and become your best self.</p>
                     </div>
 
-                    <div className={styles.buttons}>
+                    <div className={styles.skipNext}>
                         <Link to="/home" className={styles.skip}>SKIP</Link>
                         <Link to="/details" className={styles.next}>NEXT</Link>
                     </div>

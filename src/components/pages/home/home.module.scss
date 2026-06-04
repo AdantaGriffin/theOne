@@ -29,8 +29,9 @@
             .caption{
                 width: 50%;
                 align-content: center;
+                @include pageh2;
                 .red{
-                    color: red;
+                    color: #f90101;
                 }
             }
             .id{
@@ -47,6 +48,10 @@
                         height: 80px;
                         margin-bottom: 25px;
                         direction: rtl;
+                        .userAge, .userWeight, .userHeight{
+                            color: #f90101;
+                            font-size: 25px;
+                        }
                     }
                 }
             }

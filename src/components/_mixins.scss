@@ -1,9 +1,42 @@
-
 @mixin h2{
+    line-height: .1;
     font-size: 40px;
 }
+@mixin pageh2{
+    font-size: 30px;
+}
+
 @mixin p{
-    font-size: 25px;
+    font-size: 20px;
+}
+@mixin skipNext{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 24px;
+
+    .skip{
+        text-decoration: none;
+        color: grey;
+    }
+    .next{
+        @include primaryColor;
+        text-decoration: none;
+    }
+}
+@mixin button{
+    background-color: #d62828;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px black;
+    text-decoration: none;
+    margin: auto;
+    text-align: center;
+    font-size: 24px;
+    &:hover{
+        box-shadow: inset 1px 1px 10px black;
+    }
 }
 @mixin header{
     color: #f90101;
@@ -11,6 +44,25 @@
     align-content: center;
     padding: 0 20px;
 }
+@mixin exerciseNav{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 5px;
+    gap: 10px;
+    a{
+        width: 100px;
+        padding: 0 10px;
+        border-radius: 15px;
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+
+    }
+}
+//
 @mixin next{
     color: #f90101;
 }
@@ -32,19 +84,6 @@
     &:hover{
         cursor: pointer;
     box-shadow: inset 1px 1px 10px black;
-    }
-}
-@mixin button{
-    background-color: #d62828;
-    color: white;
-    padding: 5px 20px;
-    border-radius: 15px;
-    box-shadow: 1px 1px 10px black;
-    text-decoration: none;
-    margin: auto;
-    text-align: center;
-    &:hover{
-        box-shadow: inset 1px 1px 10px black;
     }
 }
 @mixin list2{
@@ -90,21 +129,5 @@
                 border-radius:initial;
             }
         }
-    }
-}
-@mixin exerciseNav{
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0 5px;
-    a{
-        width: 100px;
-        border: 1px solid black;
-        padding: 0 10px;
-        border-radius: 15px;
-        color: black;
-        text-decoration: none;
-
     }
 }

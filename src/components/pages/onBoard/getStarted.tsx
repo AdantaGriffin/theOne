@@ -13,12 +13,12 @@ function ObStart(){
 
                 <div className={styles.body}>
                     <h2 className={styles.main}>Whats your name?</h2>
-                    <div className={styles.heading}>
+                    <form className={styles.form}>
                         <input  type="text" placeholder="name"/>
                         <input  type="text" placeholder="age"/>
                         <input  type="text" placeholder="height"/>
                         <input  type="text" placeholder="weight"/>
-                    </div>
+                    </form>
 
                     <div className={styles.buttons}> {/*group into .heading and change in form. change link into input and requir all other inputs. js will use navigat to rerout on submit.*/}
                         <Link 

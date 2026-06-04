@@ -3,15 +3,27 @@
 .programs{
     height: 100%;
     display: grid;
-    grid-template-rows: 5% 5% 85% 5%;
+    grid-template-rows: 5% 10% 80% 5%;
     
     header{
         align-content: center;
+        @include header;
     }
 
-    .navigationList{
-        @include exerciseNav;
+    .navigation{
+        align-content: center;
+        overflow-x: scroll;
+
+        .navigationList{
+            height: 40px;
+            align-items: center;
+            @include exerciseNav;
+            li{
+                @include button;
+            }
+        }
     }
+
      .programsList{
         margin: 0;
         padding: 0;
@@ -24,7 +36,9 @@
             height: 45px;
             margin: 10px auto;
             border-radius: 15px;
-            
+            &:hover{
+                border: 2px solid red;
+            }
             a{
                 height: 100%;
                 display: flex;

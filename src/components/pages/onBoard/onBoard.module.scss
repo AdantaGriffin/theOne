@@ -1,7 +1,7 @@
 @use '../../mixins' as *;
 
 .onBoard{
-    height: 100%;
+    height: 100vh;
     display: grid;
     grid-template-rows: 50% 50%;
 }
@@ -18,17 +18,12 @@
         text-align: center;
     }
 }
-.buttons{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    .skip{
-        text-decoration: none;
-        color: grey;
-    }
-    .next{
-        @include primaryColor;
-        text-decoration: none;
-    }
+.main{
+    @include h2;
+}
+.heading{
+    @include p;
+}
+.skipNext{
+    @include skipNext;
 }

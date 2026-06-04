@@ -6,7 +6,7 @@ function Prev(){
     return(
         <>
             <section className={styles.prev}>
-                <div className={styles.header}>PREVIOUS SESSIONS</div>
+                <header className={styles.header}>PREVIOUS SESSIONS</header>
 
                 <nav className={styles.navigation}>
                     <ul className={styles.navigationList}>
@@ -20,40 +20,40 @@ function Prev(){
                 
                 <ul className={styles.routineHistoryList}>
                     <li className={styles.routine}>
-                        <Link
+                        <NavLink
                         className={styles.routineCard}
                         to="">
                             <div>image</div>
                             <div>title date combo</div>
                             <div>check image</div>
-                        </Link>
+                        </NavLink>
                     </li> 
                     <li className={styles.routine}>
-                        <Link
+                        <NavLink
                         className={styles.routineCard}
                         to="">
                             <div>image</div>
                             <div>title date combo</div>
                             <div>check image</div>
-                        </Link>
+                        </NavLink>
                     </li> 
                     <li className={styles.routine}>
-                        <Link
+                        <NavLink
                         className={styles.routineCard}
                         to="">
                             <div>image</div>
                             <div>title date combo</div>
                             <div>check image</div>
-                        </Link>
+                        </NavLink>
                     </li> 
                     <li className={styles.routine}>
-                        <Link
+                        <NavLink
                         className={styles.routineCard}
                         to="">
                             <div>image</div>
                             <div>title date combo</div>
                             <div>check image</div>
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
                 

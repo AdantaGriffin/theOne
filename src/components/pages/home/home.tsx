@@ -27,23 +27,29 @@ function Home(){
 
                         <div className={styles.caption}>
                             <h2>
-                                <p>EVERY DAY</p>
-                                <p>ONE PUSH CLOSER TO <span className={styles.red}>BEING STRONG</span></p>
+                                <p>
+                                    EVERY DAY PUSH CLOSER TO 
+                                    <br></br>
+                                    <span className={styles.red}>.BEING STRONG</span>
+                                </p>
                             </h2>
                         </div>
 
                         <div className={styles.id}>
                             <ul className={styles.idList}>
                                 <li>
-                                    <div>age</div>
+                                    <div className={styles.age}>age</div>
+                                    <div className={styles.userAge}>36</div>
                                     <div>{/*age?.age ?? ""*/}</div>
                                 </li>
                                 <li>
                                     <div>weight</div>
+                                    <div className={styles.userWeight}>160</div>
                                     <div>{/*weight?.weight ?? ""*/}</div>
                                 </li>
                                 <li>
                                     <div>height</div>
+                                    <div className={styles.userHeight}>"7'5</div>
                                     <div>{/*`${height?.height[1] ?? " "} ' ${height?.height[0] ?? ""}`*/}</div>
                                 </li>
                             </ul>

@@ -22,6 +22,30 @@ function Programs(){
                 <ul className={styles.programsList}>
                     <li className={styles.programsCard}>
                         <Link className={styles.programsLink} to="/programDetails/:deets">
+                            <div>The100</div>
+                            <div>image</div>
+                        </Link>
+                    </li>
+                    <li className={styles.programsCard}>
+                        <Link className={styles.programsLink} to="/programDetails/:deets">
+                            <div>text</div>
+                            <div>image</div>
+                        </Link>
+                    </li>
+                    <li className={styles.programsCard}>
+                        <Link className={styles.programsLink} to="/programDetails/:deets">
+                            <div>text</div>
+                            <div>image</div>
+                        </Link>
+                    </li>
+                    <li className={styles.programsCard}>
+                        <Link className={styles.programsLink} to="/programDetails/:deets">
+                            <div>text</div>
+                            <div>image</div>
+                        </Link>
+                    </li>
+                    <li className={styles.programsCard}>
+                        <Link className={styles.programsLink} to="/programDetails/:deets">
                             <div>text</div>
                             <div>image</div>
                         </Link>

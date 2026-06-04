@@ -20,7 +20,7 @@ function ObDetails(){
                         <p className={styles.sub}>Choose programs, follow routines and push your limit.</p>
                     </div>
 
-                    <div className={styles.buttons}>
+                    <div className={styles.skipNext}>
                         <Link to="/home" className={styles.skip}>SKIP</Link>
                         <Link to="/obStart" className={styles.next}>NEXT</Link>
                     </div>

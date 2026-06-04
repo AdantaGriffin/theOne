@@ -19,8 +19,20 @@ function Exercises(){
                 </nav>
 
                 <ul className={styles.exerciseList}>
-                    <li className={styles.exerciseCard}>
-                        <Link to={`/display/${id}`}>
+                    <li>
+                        <Link className={styles.exerciseCard} to={`/display/${id}`}>
+                            <div>image</div>
+                            <div>exercise fetched from json</div>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className={styles.exerciseCard} to={`/display/${id}`}>
+                            <div>image</div>
+                            <div>exercise fetched from json</div>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className={styles.exerciseCard} to={`/display/${id}`}>
                             <div>image</div>
                             <div>exercise fetched from json</div>
                         </Link>
