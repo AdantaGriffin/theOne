@@ -1,5 +1,5 @@
 import styles from './prev.module.scss';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Navigation from '../../navigation/navigation';
 
 function Prev(){
