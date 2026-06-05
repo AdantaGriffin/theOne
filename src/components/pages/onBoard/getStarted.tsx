@@ -8,11 +8,13 @@ function ObStart(){
             <section className={styles.obStart}>
 
                 <div className={styles.image}>
-                    <img src="./onBoard3.jpg" alt="on board image 3"/>
+                    <img src="./obProfile.png" alt="on board image 3"/>
                 </div>
 
                 <div className={styles.body}>
+
                     <h2 className={styles.main}>Whats your name?</h2>
+                    
                     <form className={styles.form}>
                         <input  type="text" placeholder="name"/>
                         <input  type="text" placeholder="age"/>

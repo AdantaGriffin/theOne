@@ -7,7 +7,7 @@ function OnBoard(){
             <section className={styles.onBoard}>
 
                 <div className={styles.image}>
-                    <img src="./onBoard1.jpg" alt="on board image 1"/>
+                    <img src="./ob1.jpg" alt="on board image 1"/>
                 </div>
 
                 <div className={styles.body}>

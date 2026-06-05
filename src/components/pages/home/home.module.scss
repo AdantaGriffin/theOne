@@ -5,12 +5,13 @@
 }
 .home{
     display: grid;
+    height: 100svh;
     .header{
         @include header;
     }
 
     .body{
-
+        overflow-x: scroll;
         .userData{
             background-image: url('../../../../public/meter.png');
             background-size: 50% 90%;
@@ -36,9 +37,9 @@
             }
             .id{
                 width: 50%;
-                border: 2px solid lightgrey;
+                border: 2px solid black;
                 border-radius: 10px;
-                margin: 0 20px 20px 0;
+                margin-bottom: 10px;
                 .idList{
                     list-style: none;
                     padding: 0;

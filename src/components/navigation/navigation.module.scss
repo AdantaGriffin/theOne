@@ -1,45 +1,7 @@
-@mixin h2{
-    font-size: 40px;
-}
-@mixin p{
-    font-size: 25px;
-}
-@mixin header{
-    color: #f90101;
-    font-size: 30px;
-    align-content: center;
-    padding: 0 20px;
-}
-@mixin list{
-    border: 1px solid red;
-    &:hover{
-        opacity: .6;
-    }
-}
-@mixin button{
-    background-color: #d62828;
-    color: white;
-    padding: 5px 20px;
-    border-radius: 15px;
-    box-shadow: 1px 1px 10px black;
-    text-decoration: none;
-    padding: 10px 40px;
-    &:hover{
-        box-shadow: inset 1px 1px 10px black;
-    }
-}
+@use '../mixins' as *;
 
-@mixin tabs{
-    color: #d62828;
-    align-content: center;
-    border-radius: 15px;
-    overflow: hidden; 
-    width: 90%;
-    margin: auto;
-}
 
 .navigation{
-    @include tabs;
     .navigationList{
         display: flex;
         justify-content: space-evenly;

@@ -8,7 +8,7 @@ function ObDetails(){
             <section className={styles.obDetails}>
 
                 <div className={styles.image}>
-                    <img src="./onBoard2.jpg" alt="on board image 2"/>
+                    <img src="./ob2.jpg" alt="on board image 2"/>
                 </div>
 
                 <div className={styles.body}>

@@ -1,9 +1,9 @@
 @use '../../mixins' as *;
 
 .onBoard{
-    height: 100vh;
+    height: 100svh;
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 60% 40%;
 }
 .image{
     img{
@@ -13,16 +13,14 @@
 }
 .body{
     display: grid;
-    grid-template-rows: 40% 40% 20%;
-    .main, .sub{
-        text-align: center;
-    }
+    grid-template-rows: 50% 30% 20%;
 }
 .main{
     @include h2;
 }
 .heading{
     @include p;
+
 }
 .skipNext{
     @include skipNext;
