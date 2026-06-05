@@ -10,11 +10,6 @@ type Data = {
     muscles:string;
 };
 
-
-type List = {
-    type: string
-}
-
 type ApiContextType = {
     exercises: Data[];
     setExercises: React.Dispatch<React.SetStateAction<Data[]>>;

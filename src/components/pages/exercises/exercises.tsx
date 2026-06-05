@@ -5,8 +5,7 @@ import { useApi } from '../../api/api';
 
 
 function Exercises(){
-    const {id} = useParams();
-    const {exercises, setExercises, filterExList, setFilterExList} = useApi();
+    const {exercises, filterExList, setFilterExList} = useApi();
     console.log(filterExList)
     //console.log(exercises)
     
