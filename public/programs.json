@@ -1,0 +1,22 @@
+{
+    "programs": [
+        {
+            "id":"1",
+            "name":"AyeGee",
+            "description":"Description",
+            "routine":["list of exercises serperated by comma"]
+        },
+        {
+            "id":"2",
+            "name":"Name",
+            "description":"Description",
+            "routine":["List of exercises serperated by comma"]
+        },
+        {
+            "id":"3",
+            "name":"Name",
+            "description":"Layers like a tree",
+            "routine":["List of exercises serperated by comma"]
+        }
+    ]
+}

@@ -1,25 +1,33 @@
 import styles from './display.module.scss';
 import { useParams, Link } from 'react-router-dom';
+import { useApi } from '../../api/api';
 
 function Display(){
     const {id} = useParams();
+    const{exercises} = useApi();
+    //console.log(exercises[0]?.id);
+    const filter = exercises.filter(x => x.id === Number(id));
+    console.log(filter)
     return(
         <>
             <section className={styles.display}>
-                <header>name of exercise {id}</header>
+                <header>{filter[0]?.name}</header>
 
                 <div className={styles.image}>
-                    <img src="null" alt="name image"/>
+                    <img src={filter[0]?.image} height="100%" width="100%" alt="name image"/>
                 </div>
 
-                <div className={styles.parts}>body parts</div>
+                <div className={styles.parts}>{filter[0]?.part}</div>
 
                 <div className={styles.instructions}>
                     <ol className={styles.instructionsList}>
+                        {filter[0]?.execution.map((step, index) => (
+                          <li key={index}>{step}</li>
+                        ))}
+                        {/*<li>instructions</li>
                         <li>instructions</li>
                         <li>instructions</li>
-                        <li>instructions</li>
-                        <li>instructions</li>
+                        <li>instructions</li>*/}
                     </ol>
                 </div>
 

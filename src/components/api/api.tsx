@@ -1,41 +1,52 @@
-import {createContext, useContext} from 'react';
+import {useState, useEffect, createContext, useContext} from 'react';
 
-type Name = {
+type Data = {
+    id: number;
+    type: string;
+    image: string;
     name: string;
+    part: string;
+    execution:string[];
+    muscles:string;
 };
-type Age = {
-    age: string;
-};
-type Weight = {
-    weight: string;
-};
-type Height = {
-    height: string;
-};
+
+
+type List = {
+    type: string
+}
 
 type ApiContextType = {
-    age: Age;
-    setAge: React.Dispatch<React.SetStateAction<Age>>;
-    name: Name;
-    setName: React.Dispatch<React.SetStateAction<Name>>;
-    weight: Weight;
-    setWeight: React.Dispatch<React.SetStateAction<Weight>>;
-    height: Height;
-    setHeight: React.Dispatch<React.SetStateAction<Height>>;
+    exercises: Data[];
+    setExercises: React.Dispatch<React.SetStateAction<Data[]>>;
+    filterExList: string;
+    setFilterExList: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const ApiContext = createContext<ApiContextType | null>(null);
 
 export function ApiProvider({ children }: { children: React.ReactNode }){
     
-    //set ID data
+    //exercise data
+    const [exercises, setExercises] = useState<Data[]>([]);
+    useEffect(() => {
+    async function getData(){
+        const response = await fetch('/data.json');
+        const result = await response.json();
+        //console.log(result.data);
+        setExercises(result.data)
+    }
+    getData()
+    }, [])
+    //filter exersize for display page
    
+    //nav filter for exersize list
+    const [filterExList, setFilterExList] = useState("all");
 
     //set exercise stats
     return(
 
         <ApiContext.Provider
-            value={null}// pass all useState in here so outside components can use
+            value={{exercises, setExercises, filterExList, setFilterExList}}// pass all useState in here so outside components can use
         >
             {children}
         </ApiContext.Provider>
