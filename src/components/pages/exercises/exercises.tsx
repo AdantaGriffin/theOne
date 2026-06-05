@@ -1,5 +1,5 @@
 import styles from './exercises.module.scss';
-import { NavLink, Link, useParams } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import Navigation from '../../navigation/navigation';
 import { useApi } from '../../api/api';
 
