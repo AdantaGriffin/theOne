@@ -2,8 +2,10 @@ import styles from './home.module.scss';
 import { Link } from 'react-router-dom';
 import Tabs from '../../tabs/tabs';
 import Navigation from '../../navigation/navigation';
+import { useApi } from '../../api/api';
+
 function Home(){
-    //const {name, setName, age, setAge,  weight, setWeight,  height, setHeight } = useApi();
+    const {name, setName, age, setAge,  weight, setWeight,  height, setHeight } = useApi();
     
     {/*useEffect(()=> {
         async function setData(){
@@ -19,7 +21,7 @@ function Home(){
         <>
             <section className={styles.home}>
 
-                <div className={styles.header}>Welcome back, {/*name?.name ?? ""*/}</div>
+                <div className={styles.header}>Welcome back, {name ? name : ""}</div>
 
                 <div className={styles.body}>
 
@@ -39,18 +41,15 @@ function Home(){
                             <ul className={styles.idList}>
                                 <li>
                                     <div className={styles.age}>age</div>
-                                    <div className={styles.userAge}>36</div>
-                                    <div>{/*age?.age ?? ""*/}</div>
+                                    <div className={styles.userAge}>{age ? age : ""}</div>
                                 </li>
                                 <li>
                                     <div>weight</div>
-                                    <div className={styles.userWeight}>160</div>
-                                    <div>{/*weight?.weight ?? ""*/}</div>
+                                    <div className={styles.userWeight}>{weight ? weight : ""}</div>
                                 </li>
                                 <li>
                                     <div>height</div>
-                                    <div className={styles.userHeight}>"7'5</div>
-                                    <div>{/*`${height?.height[1] ?? " "} ' ${height?.height[0] ?? ""}`*/}</div>
+                                    <div className={styles.userHeight}>{height ? height : ""}</div>
                                 </li>
                             </ul>
                         </div>

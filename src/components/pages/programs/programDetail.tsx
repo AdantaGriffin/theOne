@@ -9,7 +9,7 @@ function ProgramDetails(){
             <section className={styles.programDetails}>
 
                 <div className={styles.programHeader}>
-                    {'id: ' + id + ' name'}
+                    {'id: ' + id }
                 </div>
 
                 <div className={styles.programBody}>

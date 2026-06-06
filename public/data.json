@@ -6,7 +6,7 @@
             "image":"/images/tricepExtension.png",
             "name":"triceps extension",
             "level":2,
-            "part":"arm",
+            "type2":"push",
             "execution":["Place hands on the coner of a tanle or seat of a chair and back into a proper position.","Keeping your bodu in a straight line with straight legs, straight arms and weight on toes, and the abdominals and glutes braced, lower your body by bending the elbows.", "Raise the body again using the triceps to extend the elbows."],
             "muscles":{
                 "primary":" Triceps Brachii",
@@ -20,7 +20,7 @@
             "image":"/images/short-lever-inverted-curl.png",
             "name":"short lever inverted curl",
             "level":"3",
-            "part":"arms",
+            "type2":"pull",
             "execution":["Lying on your back, set up under a sturdy table or tall chair with your hands grasping the outter ledges, palms facing each other.","With your torso and legs in a straight line, neck in neutral position, knees ebnt at 90 degrees, weight on the heels, and the abdominals and glutes braced, raise your bodu by bending the elbows.", "Lower to starting position under control, moving mostly at the elbows and not the shoulder."],
             "muscles":{
                 "primary":"Bicep Brachii",
@@ -34,7 +34,7 @@
             "image":"/images/bicep-chin-up.png",
             "name":"bicep chin up",
             "level":"3",
-            "part":"arms",
+            "type2":"pull",
             "execution":["Begin in a full stretch position, hanging from a secure rafter or chin up bar with arms in a surpinated grip, palms facing you. The toes will be off the ground and the knees can be bent.", "Pull the body over the rafter or chin up bar to sternum height while keeping the core stable","Lowering the body under control making sure you come all the way down."],
             "muscles":{
                 "primary":"Bicep Brachii",
@@ -48,7 +48,7 @@
             "image":"/images/narrow-tricep-pushup.png",
             "name":"narrow tricep push up",
             "level":"3",
-            "part":"arms",
+            "type2":"push",
             "execution":["Lie face down with the hands positioned whoulder width apart and the elbows tucked into the body.","With the feet together and the core stable press the body up.","Lowering the body until the chest touches the floor."],
             "muscles":{
                 "primary":["Tricep Brachii", "Pectoralis Major", "Anterior Deltoid"],
@@ -62,7 +62,7 @@
             "image":"/images/three-point-bench-dip.png",
             "name":"three point bench dip",
             "level":"2",
-            "part":"arms",
+            "type2":"push",
             "execution":["Set up three chair so that your feet are resting on one and you body is centered between the other two.","With your palms on the end of the two chairs, fingers forward, and your torso upright and legs in a straight line.", "Push your body up back to starting position"],
             "muscles":{
                 "primary":"Tricep Brachii",
@@ -76,7 +76,7 @@
             "image":"/images/wall-anterior-isohold.png",
             "name":"wall anterior neck isohold",
             "level":"2",
-            "part":"neck-shoulder",
+            "type2":"push",
             "execution":["Place a folded towel on the forehead.", "From a standing position with arms at the sides, lean against the wall makign sure to keep the body in a straight line.", "Hold for desire amount of time."],
             "muscles":{
                 "primary":["Sternocleidomastoid"],
@@ -90,7 +90,7 @@
             "image":"/images/manual-neck-isohold.png",
             "name":"manual neck holds",
             "level":"1",
-            "part":"neck-shoulder",
+            "type2":"push",
             "execution":["From a seated position with the elbows braced on the thighs, placed the hands infront of the head and aplly isometric resistence for 10 seconds.", "Place the hands on the back of the head and hold for another 10 seconds while applying manual resistance.", "Finish with a lateral isohold on each side by applying manual resistance for 10 seconds."],
             "muscles":{
                 "primary":["Sternocleidomastoid", "Scalenes", "Trapezius", "Cervical Extensors"],
@@ -104,7 +104,7 @@
             "image":"/images/pushback.png",
             "name":"push back",
             "level":"2",
-            "part":"neck-shoulder",
+            "type2":"push",
             "execution":["Stand with feet wider than hip width and set up as up would in the bottom of a push up position, but keep your hips high.", "Push up and back while crouching at the hips, keeping the hips higher than the shoulders.", "Return to startign position"],
             "muscles":{
                 "primary":["Anterior Deltion", "Lateral Deltoid", "Upper Pectoralis Major", "Triceps Brachii"],
@@ -118,7 +118,7 @@
             "image":"/images/feet-elevated-pike-pushup.png",
             "name":"feet elevated pike push up",
             "level":"3",
-            "part":"neck-shoulder",
+            "type2":"push",
             "execution":["Place ypur hands on the floor just wider than shoulder width and your feet ontop of a sturdy chair, box, or weight bench.", "Pike into an 'L' position by walking your hands back while flexing the hips and raising your buttocks toward the ceiling, then lower your body towards the floor by bending your elbows.", "When your head reaches the ground, reverse the motion to starting pike position by locking out the arms and pushing the body high and away from the floor"],
             "muscles":{
                 "primary":["Deltoids", "Triceps Brachii"],
@@ -132,7 +132,7 @@
             "image":"/images/rearDeltoid.png",
             "name":"rear deltoid raise",
             "level":"2",
-            "part":"neck-shoulder",
+            "type2":"pull",
             "execution":["From a standing position with a towel wrapped around a pole, grab the end of the towel and lean back into position.", "Keeping the body in a straight line, raise your body by bringing the arms out to the side.", "Control the decent back to starting position."],
             "muscles":{
                 "primary":["Posterior Deltoid"],
@@ -146,7 +146,7 @@
             "image":"/images/ytwl.png",
             "name":"ytwl",
             "level":"1",
-            "part":"neck-shoulder",
+            "type2":"static",
             "execution":["From a standing position, bend at hips past a 45 degree torse angle, maintaining a neutral spine while sitting back and stretching the hamstrings.", "Perform 10 dynamic 'Y' motions by forming a 'Y' with the arms, returning to starting position after each repitition. Switch to 10 'T' to motions with the arms followed by 10 'W' motions.", "Transition into 10 'L' motions by holding the arms straight out with the elbows bent at 90 degrees and rotating at the shoulder joint so that the forearms move from vertical to the ground to paraelle to the ground."],
             "muscles":{
                 "primary":["Lower Trpezius", "Middle Trapezius", "Rotator Cuff Musculature", "Posterior Deltoid"],
@@ -160,7 +160,7 @@
             "image":"/images/handstand.png",
             "name":"wall hand stand push up",
             "level":"4",
-            "part":"neck-shoulder",
+            "type2":"push",
             "execution":["Starting on your hand and knees, place your feet against the wall and walk your way up into a handstand position so that your toes end up against the wall, your body is relatively vertical in a straight line, and you are facing the wall.", "Lower the body slowly by bending the elbows until the head reaches the ground.", "Reverse the movement and raise the body back to starting position."],
             "muscles":{
                 "primary":["Deltoids", "Tricep Brachii"],
@@ -174,7 +174,7 @@
             "image":"/images/pushup.png",
             "name":"push up",
             "level":"",
-            "part":"chest",
+            "type2":"push",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -188,7 +188,7 @@
             "image":"/images/elevatedPushup.png",
             "name":"elevated push up",
             "level":"",
-            "part":"chest",
+            "type2":"push",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -202,7 +202,7 @@
             "image":"/images/chestDip.png",
             "name":"chest dip",
             "level":"",
-            "part":"chest",
+            "type2":"push",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -216,7 +216,7 @@
             "image":"/images/sideToSide.png",
             "name":"side to side push up",
             "level":"",
-            "part":"chest",
+            "type2":"push",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -230,7 +230,7 @@
             "image":"/images/oneArm.png",
             "name":"one arm push up",
             "level":"",
-            "part":"chest",
+            "type2":"push",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -244,7 +244,7 @@
             "image":"/images/clap.png",
             "name":"clapping push up",
             "level":"",
-            "part":"chest",
+            "type2":"push",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -258,7 +258,7 @@
             "image":"/images/chestDip.png",
             "name":"chest dip",
             "level":"",
-            "part":"chest",
+            "type2":"push",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -272,7 +272,7 @@
             "image":"/images/slidingFly.png",
             "name":"sliding fly",
             "level":"",
-            "part":"chest",
+            "type2":"push",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -286,7 +286,7 @@
             "image":"/images/crunch.png",
             "name":"crunch",
             "level":"",
-            "part":"core",
+            "type2":"core",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -300,7 +300,7 @@
             "image":"/images/superman.png",
             "name":"superman",
             "level":"",
-            "part":"core",
+            "type2":"core",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -314,7 +314,7 @@
             "image":"/images/bicycle.png",
             "name":"bicycle",
             "level":"",
-            "part":"core",
+            "type2":"core",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -328,7 +328,7 @@
             "image":"/images/seatedKnee.png",
             "name":"seated knee up",
             "level":"",
-            "part":"core",
+            "type2":"core",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -342,7 +342,7 @@
             "image":"/images/bentKnee.png",
             "name":"bent knee single leg extension",
             "level":"",
-            "part":"core",
+            "type2":"core",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -356,7 +356,7 @@
             "image":"/images/legExt.png",
             "name":"double leg raise",
             "level":"",
-            "part":"core",
+            "type2":"core",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -370,7 +370,7 @@
             "image":"/images/situp.png",
             "name":"sit up",
             "level":"",
-            "part":"core",
+            "type2":"core",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -384,7 +384,7 @@
             "image":"/images/plank.png",
             "name":"front plank",
             "level":"",
-            "part":"core",
+            "type2":"core",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -398,7 +398,7 @@
             "image":"/images/rotating.png",
             "name":"rotating three point plank",
             "level":"2",
-            "part":"core",
+            "type2":"core",
             "execution":["Get into a standard plank position. While keeping the body stable lift one arm in the air and hold for a 2 second count.", "Return to starting position then raise the other arm in the air while keeping the body stable.", "Return to starting position than raise one leg.", "Continue to rotate limps in the manner for entire set."],
             "muscles":{
                 "primary":["Rectus Abdominis", "Internal Oblique", "External Oblique"],
@@ -412,7 +412,7 @@
             "image":"/images/oblique.png",
             "name":"oblique raise",
             "level":"",
-            "part":"core",
+            "type2":"core",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -426,7 +426,7 @@
             "image":"/images/rfk.png",
             "name":"rkp plank",
             "level":"",
-            "part":"core",
+            "type2":"core",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -440,7 +440,7 @@
             "image":"/images/sidePlank.png",
             "name":"side plank",
             "level":"",
-            "part":"core",
+            "type2":"core",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -454,7 +454,7 @@
             "image":"/images/hangingKneeRaise.png",
             "name":"hanging leg raise",
             "level":"",
-            "part":"core",
+            "type2":"core",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -468,7 +468,7 @@
             "image":"/images/oblique.png",
             "name":"oblique hanging leg raise",
             "level":"",
-            "part":"core",
+            "type2":"core",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -482,7 +482,7 @@
             "image":"/images/rollOut.png",
             "name":"roll out",
             "level":"",
-            "part":"core",
+            "type2":"core",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -496,7 +496,7 @@
             "image":"/images/slidingSaw.png",
             "name":"sliding body saw",
             "level":"",
-            "part":"core",
+            "type2":"core",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -510,7 +510,7 @@
             "image":"/images/pullup.png",
             "name":"pull up",
             "level":"",
-            "part":"back",
+            "type2":"pull",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -524,7 +524,7 @@
             "image":"/images/sideToSide.png",
             "name":"side to sidepull up",
             "level":"",
-            "part":"back",
+            "type2":"pull",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -538,7 +538,7 @@
             "image":"/images/towelUp.png",
             "name":"towel pull up",
             "level":"",
-            "part":"back",
+            "type2":"pull",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -552,7 +552,7 @@
             "image":"/images/invertedRow.png",
             "name":"modified inverted row",
             "level":"2",
-            "part":"back",
+            "type2":"pull",
             "execution":["Grasp the side of a sturdy table"],
             "muscles":{
                 "primary":[""],
@@ -566,7 +566,7 @@
             "image":"/images/invertedRowSide.png",
             "name":"side to side inverted row",
             "level":"2",
-            "part":"back",
+            "type2":"pull",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -580,7 +580,7 @@
             "image":"/images/scapula.png",
             "name":"scapular shrug",
             "level":"2",
-            "part":"back",
+            "type2":"pull",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -594,7 +594,7 @@
             "image":"/images/towelShrug.png",
             "name":"towel face pull",
             "level":"",
-            "part":"back",
+            "type2":"pull",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -608,7 +608,7 @@
             "image":"/images/sumoSquat.png",
             "name":"sumo squat",
             "level":"",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -622,7 +622,7 @@
             "image":"/images/wallSit.png",
             "name":"wall squat isohold",
             "level":"1",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -636,7 +636,7 @@
             "image":"/images/boxSquat.png",
             "name":"box squat",
             "level":"",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -650,7 +650,7 @@
             "image":"/images/squat.png",
             "name":"full squat",
             "level":"",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -664,7 +664,7 @@
             "image":"/images/sissy.png",
             "name":"sissy squat",
             "level":"",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -678,7 +678,7 @@
             "image":"/images/singleBox.png",
             "name":"single leg box squat",
             "level":"",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -692,7 +692,7 @@
             "image":"/images/skater.png",
             "name":"skater squat",
             "level":"",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -706,7 +706,7 @@
             "image":"/images/pistal.png",
             "name":"pistol squat",
             "level":"",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -720,7 +720,7 @@
             "image":"/images/lunge.png",
             "name":"static lunge",
             "level":"",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -734,7 +734,7 @@
             "image":"/images/reverseLunge.png",
             "name":"reverse lunge",
             "level":"",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -748,7 +748,7 @@
             "image":"/images/slidingLunge.png",
             "name":"sliding lunge",
             "level":"",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -762,7 +762,7 @@
             "image":"/images/stepUp.png",
             "name":"step up",
             "level":"",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -776,7 +776,7 @@
             "image":"/images/bulgarian.png",
             "name":"bulgarian split squat",
             "level":"2",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -790,7 +790,7 @@
             "image":"/images/hamstringCurl.png",
             "name":"russian leg curl",
             "level":"3",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -804,7 +804,7 @@
             "image":"/images/singleRomanian.png",
             "name":"single leg romanian deadlift",
             "level":"2",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -818,7 +818,7 @@
             "image":"/images/pHyper.png",
             "name":"back extension",
             "level":"1",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -832,7 +832,7 @@
             "image":"/images/pHyper.png",
             "name":"Reverse Hyper Extension",
             "level":"2",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -846,7 +846,7 @@
             "image":"/images/slidingLegCurl.png",
             "name":"sliding leg curl",
             "level":"",
-            "part":"thighs",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -860,7 +860,7 @@
             "image":"/images/gluteBridge.png",
             "name":"glute bridge",
             "level":"",
-            "part":"glutes",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -874,7 +874,7 @@
             "image":"/images/hipThrust.png",
             "name":" elevated hip thrust",
             "level":"",
-            "part":"glutes",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -888,7 +888,7 @@
             "image":"/images/elevatedHipThrust.png",
             "name":"shoulder and feet elevated hip thrust",
             "level":"",
-            "part":"glutes",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -902,7 +902,7 @@
             "image":"/images/donkey.png",
             "name":"donkey kick",
             "level":"",
-            "part":"glutes",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -916,7 +916,7 @@
             "image":"/images/clam.png",
             "name":"side lying clam",
             "level":"",
-            "part":"glutes",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -930,7 +930,7 @@
             "image":"/images/hipRaise.png",
             "name":"side lying hip raise",
             "level":"",
-            "part":"glutes",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -944,7 +944,7 @@
             "image":"/images/elevatedCalf.png",
             "name":"elevated calf raise",
             "level":"",
-            "part":"calves",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -958,7 +958,7 @@
             "image":"/images/seatedCalf.png",
             "name":"squat calf raise",
             "level":"",
-            "part":"calves",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -972,7 +972,7 @@
             "image":"/images/calfJump.png",
             "name":"stiff leg ankle hop",
             "level":"",
-            "part":"calves",
+            "type2":"legs",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -986,7 +986,7 @@
             "image":"/images/jumpingJack.png",
             "name":"jumping jack",
             "level":"",
-            "part":"full",
+            "type2":"full",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -1000,7 +1000,7 @@
             "image":"/images/burpee.png",
             "name":"burpee",
             "level":"",
-            "part":"full",
+            "type2":"full",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -1014,7 +1014,7 @@
             "image":"/images/pushHitExt.png",
             "name":"push up with extension",
             "level":"",
-            "part":"full",
+            "type2":"full",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -1028,7 +1028,7 @@
             "image":"/images/towelIsoGlute.png",
             "name":"towel row isohold with glute march",
             "level":"",
-            "part":"full",
+            "type2":"full",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -1042,7 +1042,7 @@
             "image":"/images/sitToBurpee.png",
             "name":"sit up burpee",
             "level":"",
-            "part":"full",
+            "type2":"full",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -1056,7 +1056,7 @@
             "image":"/images/mountain.png",
             "name":"mountain climbers",
             "level":"",
-            "part":"full",
+            "type2":"full",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -1070,7 +1070,7 @@
             "image":"/images/bear.png",
             "name":"bear crawl",
             "level":"2",
-            "part":"full",
+            "type2":"full",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -1084,7 +1084,7 @@
             "image":"/images/muscleUp.png",
             "name":"jumping muscle up",
             "level":"",
-            "part":"full",
+            "type2":"full",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -1098,7 +1098,7 @@
             "image":"/images/croc.png",
             "name":"crocodile crawl",
             "level":"3",
-            "part":"full",
+            "type2":"full",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -1112,7 +1112,7 @@
             "image":"/images/crab.png",
             "name":"crab walk",
             "level":"",
-            "part":"full",
+            "type2":"full",
             "execution":[""],
             "muscles":{
                 "primary":[""],
@@ -1123,10 +1123,10 @@
         {
             "id":2000,
             "type":"mobility",
-            "image":"",
+            "image":"null",
             "name":"mobility one",
             "level":"",
-            "part":"",
+            "type2":"",
             "execution":"",
             "muscles":{
                 "primary":"",
@@ -1137,10 +1137,10 @@
         {
             "id":2001,
             "type":"mobility",
-            "image":"",
+            "image":"null",
             "name":"mobility two",
             "level":"",
-            "part":"",
+            "type2":"",
             "execution":"",
             "muscles":{
                 "primary":"",

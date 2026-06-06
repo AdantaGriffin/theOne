@@ -1,19 +1,28 @@
 {
     "programs": [
         {
-            "id":"1",
-            "name":"AyeGee",
-            "description":"Description",
-            "routine":["list of exercises serperated by comma"]
+            "id":"program1",
+            "name":"AyeGee's Foundation",
+            "description":"Keep it simple, Keep is thorough",
+            "routine":[
+                "pushup", "100",
+                "situp", "100",
+                "plank", "100",
+                "pullUp", "100",
+                "backExt", "100",
+                "squat", "100",
+                "dips","100",
+                "russianTwist", "100"
+            ]
         },
         {
-            "id":"2",
+            "id":"program2",
             "name":"Name",
             "description":"Description",
             "routine":["List of exercises serperated by comma"]
         },
         {
-            "id":"3",
+            "id":"program3",
             "name":"Name",
             "description":"Layers like a tree",
             "routine":["List of exercises serperated by comma"]

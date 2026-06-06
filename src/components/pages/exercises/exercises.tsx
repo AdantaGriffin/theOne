@@ -6,9 +6,11 @@ import { useApi } from '../../api/api';
 
 function Exercises(){
     const {exercises, filterExList, setFilterExList} = useApi();
-    console.log(filterExList)
+    //console.log(filterExList)
     //console.log(exercises)
-    
+    const filterByType = exercises.filter(x => x.type2 === filterExList);
+    //console.log(filterByType); list after filtering with button
+    const list = filterExList === 'all' ? exercises : filterByType; 
     return(
         <>
             <section className={styles.exercise}>
@@ -19,13 +21,14 @@ function Exercises(){
                         <li><NavLink onClick={() => setFilterExList('push')} to="">push</NavLink></li>
                         <li><NavLink onClick={() => setFilterExList('pull')} to="">pull</NavLink></li>
                         <li><NavLink onClick={() => setFilterExList('core')} to="">core</NavLink></li>
-                        <li><NavLink onClick={() => setFilterExList('legs')} to="">squat</NavLink></li>
+                        <li><NavLink onClick={() => setFilterExList('legs')} to="">legs</NavLink></li>
                     </ul>
                 </nav>
 
                 <div className={styles.listContainer}>
                     <ul className={styles.exerciseList}>
-                        {exercises.map(x => (
+                        
+                        {list.map(x => (
                             <li 
                             key={x.id}>
                                 <Link className={styles.exerciseCard} to={`/display/${x.id}`}>
@@ -34,24 +37,6 @@ function Exercises(){
                                 </Link>
                             </li>
                         ))}
-                        {/*<li>
-                            <Link className={styles.exerciseCard} to={`/display/${id}`}>
-                                <div>image</div>
-                                <div>exercise fetched from json</div>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className={styles.exerciseCard} to={`/display/${id}`}>
-                                <div>image</div>
-                                <div>exercise fetched from json</div>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className={styles.exerciseCard} to={`/display/${id}`}>
-                                <div>image</div>
-                                <div>exercise fetched from json</div>
-                            </Link>
-                        </li>*/}
                     </ul>
                 </div>
 
