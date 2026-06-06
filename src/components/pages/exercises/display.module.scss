@@ -3,8 +3,10 @@
 .display{
     height: 100svh;
     display: grid;
-    grid-template-rows: 10% 30% 20% 30% 10%;
-
+    grid-template-rows: 5% 40% 40% 10% 5%;
+    header{
+        font-size: 25px;
+    }
     .image{
         border-bottom: 1px solid black;
         align-content: center;

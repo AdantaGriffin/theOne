@@ -22,6 +22,7 @@ function Exercises(){
                         <li><NavLink onClick={() => setFilterExList('pull')} to="">pull</NavLink></li>
                         <li><NavLink onClick={() => setFilterExList('core')} to="">core</NavLink></li>
                         <li><NavLink onClick={() => setFilterExList('legs')} to="">legs</NavLink></li>
+                        <li><NavLink onClick={() => setFilterExList('full')} to="">full</NavLink></li>
                     </ul>
                 </nav>
 

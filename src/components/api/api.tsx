@@ -32,6 +32,8 @@ type ApiContextType = {
     setHeight: React.Dispatch<React.SetStateAction<string>>;
     programs: Programs[];
     setPrograms: React.Dispatch<React.SetStateAction<Programs[]>>;
+    difficulty: string;
+    setDifficulty: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const ApiContext = createContext<ApiContextType | null>(null);
@@ -67,11 +69,12 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
         }
         getPrograms();
     }, [])
-
+    //difficulty state management
+    const [difficulty, setDifficulty] = useState("");
     return(
 
         <ApiContext.Provider
-            value={{exercises, setExercises, filterExList, setFilterExList, name, setName, age, setAge, weight, setWeight, height, setHeight, programs, setPrograms}}// pass all useState in here so outside components can use
+            value={{exercises, setExercises, filterExList, setFilterExList, name, setName, age, setAge, weight, setWeight, height, setHeight, programs, setPrograms, difficulty, setDifficulty}}// pass all useState in here so outside components can use
         >
             {children}
         </ApiContext.Provider>
