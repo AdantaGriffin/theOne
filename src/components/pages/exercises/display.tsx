@@ -17,7 +17,7 @@ function Display(){
                     <img src={filter[0]?.image} height="100%" width="100%" alt="name image"/>
                 </div>
 
-                <div className={styles.parts}>{filter[0]?.part}</div>
+                <div className={styles.parts}>{filter[0]?.type2}</div>
 
                 <div className={styles.instructions}>
                     <ol className={styles.instructionsList}>

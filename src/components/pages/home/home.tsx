@@ -5,7 +5,7 @@ import Navigation from '../../navigation/navigation';
 import { useApi } from '../../api/api';
 
 function Home(){
-    const {name, setName, age, setAge,  weight, setWeight,  height, setHeight } = useApi();
+    const {name, age, weight, height} = useApi();
     
     {/*useEffect(()=> {
         async function setData(){

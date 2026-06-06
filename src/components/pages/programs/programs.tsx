@@ -1,10 +1,10 @@
 import styles from './programs.module.scss';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navigation from '../../navigation/navigation';
 import { useApi } from '../../api/api';
 
 function Programs(){
-    const {programs, setPrograms} = useApi();
+    const {programs} = useApi();
     console.log(programs)
 
     return(
