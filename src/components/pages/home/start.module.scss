@@ -1,10 +1,9 @@
 @use '../../mixins' as *;
 
 .start{
-    border: 1px solid red;
     height: 100svh;
     display: grid;
-    grid-template-rows: 10% 70% 10% 10%;
+    grid-template-rows: 10% 80% 10%;
 
 
     h1{
@@ -12,27 +11,24 @@
     }
 
     .exerciseComponentList{
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        li{
-        position: relative;
-        top: 20px;
-            text-align: center;
-            height: 50px;
             align-content: center;
-            margin-bottom: 30px;
-            button{
-                @include button;  
+            height: 80%;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li{
+                width: 90%;
+                margin: 10px auto;
+                a{
+                    @include button;
+                }
             }
         }
-    }
 
-    .nextLink{
-        @include button;
-        align-content: center;
-        text-align: center;
-        border: 1px solid red;
-    }
+        a{
+            @include skipNext;
+            align-content: center;
+            text-align: center;
+            text-decoration: none;
+        }
 }

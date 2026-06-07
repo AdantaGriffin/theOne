@@ -1,0 +1,24 @@
+{
+    "previousSessions":[
+        {
+            "id":"1",
+            "name":"Day 1",
+            "date":"",
+            "push":[],
+            "pull":[],
+            "core":[],
+            "legs":[],
+            "cardio":[]
+        },
+        {
+            "id":"2",
+            "name":"Follow up",
+            "date":"",
+            "push":[],
+            "pull":[],
+            "core":[],
+            "legs":[],
+            "cardio":[]
+        }
+    ]
+}

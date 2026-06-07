@@ -14,21 +14,23 @@ function Profile(){
                     </div>
                 </div>
 
-                <div className={styles.details}>
-                    <p>dob</p>
-                    <p>weight</p>
-                    <p>height</p>
-                </div>
+                <div className={styles.body}>
+                    <div className={styles.details}>
+                        <p>dob</p>
+                        <p>weight</p>
+                        <p>height</p>
+                    </div>
 
-                <div className={styles.list}>
-                    <ul className={styles.profileList}>
-                        <li>settings</li>
-                        <li>summary</li>
-                        <li>goal</li>
-                        <li>meter</li>
-                        <li>progress gallery</li>
-                        <li>settings</li>
-                    </ul>
+                    <div className={styles.list}>
+                        <ul className={styles.profileList}>
+                            <li>settings</li>
+                            <li>summary</li>
+                            <li>goal</li>
+                            <li>meter</li>
+                            <li>progress gallery</li>
+                            <li>settings</li>
+                        </ul>
+                    </div>
                 </div>
                 <Navigation/>
             </section>

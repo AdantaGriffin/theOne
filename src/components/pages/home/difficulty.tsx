@@ -27,6 +27,7 @@ function Difficulty(){
                 </div>
                 
                 <Navigation/>
+                
             </section>
         </>
     )

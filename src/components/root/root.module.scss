@@ -1,8 +1,9 @@
 @use '../mixins' as *;
 
 .root{
-    height: 100vh;
+    height: 100svh;
     overflow-x: scroll;
     padding: 10px;
     font-family: "Bebas Neue";
+    overflow:hidden
 }

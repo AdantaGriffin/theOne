@@ -14,17 +14,20 @@ function Start(){
                 <div className={styles.body}>
                     <h3>start new session</h3>
                     <ul className={styles.exerciseComponentList}>
-                        <li><button>push</button></li>
-                        <li><button>pull</button></li>
-                        <li><button>core</button></li>
-                        <li><button>legs</button></li>
-                        <li><button>programs</button></li>
+                        <li><Link to="">push</Link></li>
+                        <li><Link to="">pull</Link></li>
+                        <li><Link to="">core</Link></li>
+                        <li><Link to="">legs</Link></li>
+                        <li><Link to="">cardio</Link></li>
+                        <li><Link to="">programs</Link></li>
                     </ul>
+                    <Link className={styles.nextLink} to="/inProgress">start</Link>
                 </div>
 
-                <Link className={styles.nextLink} to="/inProgress">start</Link>
+                
 
                 <Navigation/>
+
             </section>
         </>
     )

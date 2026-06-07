@@ -6,6 +6,9 @@
     grid-template-rows: 5% 40% 40% 10% 5%;
     header{
         font-size: 25px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
     .image{
         border-bottom: 1px solid black;

@@ -11,7 +11,10 @@ function Programs(){
         <>
             <section className={styles.programs}>
 
-                <header>PROGRAMS</header>
+                <header>
+                    <Link to="/home"><img src="/left-arrow.png" width="30px" height="30px" alt="back"/></Link>
+                    <p>PROGRAMS</p>
+                </header>
 
                 <ul className={styles.programsList}>
                     {programs.map(x => (

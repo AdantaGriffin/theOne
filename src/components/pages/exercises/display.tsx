@@ -12,7 +12,10 @@ function Display(){
     return(
         <>
             <section className={styles.display}>
-                <header>{filter[0]?.name}</header>
+                <header>
+                    <Link to="/exercises"><img src="/left-arrow.png" width="30px" height="30px" alt="back"/></Link>
+                    <p>{filter[0]?.name}</p>
+                </header>
 
                 <div className={styles.image}>
                     <img src={filter[0]?.image} height="100%" width="100%" alt="name image"/>

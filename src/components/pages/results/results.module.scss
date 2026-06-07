@@ -1,7 +1,8 @@
 .results{
+    border: 1px solid red;
     height: 100svh;
     display: grid;
-    grid-template-rows: 5% 10% 40% 40% 5%;
+    grid-template-rows: 10% 80% 10%;
 
     header{
         align-content: center;

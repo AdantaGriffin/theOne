@@ -5,6 +5,7 @@
 }
 .home{
     display: grid;
+    grid-template-rows: 10% 80% 10%;
     height: 100svh;
     .header{
         @include header;
@@ -42,7 +43,7 @@
                 border-radius: 10px;
                 margin-bottom: 10px;
                 position: relative;
-                top: 15px;
+                top: 30px;
                 .idList{
                     list-style: none;
                     padding: 0;

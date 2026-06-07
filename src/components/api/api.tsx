@@ -17,6 +17,17 @@ type Programs = {
     routine: string[];
 }
 
+type Sessions = {
+    id: string;
+    name: string;
+    date: string;
+    push:string[];
+    pull:string[];
+    core:string[];
+    legs:string[];
+    cardio:string[];
+}
+
 type ApiContextType = {
     exercises: Data[];
     setExercises: React.Dispatch<React.SetStateAction<Data[]>>;
@@ -34,6 +45,8 @@ type ApiContextType = {
     setPrograms: React.Dispatch<React.SetStateAction<Programs[]>>;
     difficulty: string;
     setDifficulty: React.Dispatch<React.SetStateAction<string>>;
+    prevSessions: Sessions[];
+    setPrevSessions: React.Dispatch<React.SetStateAction<Sessions[]>>;
 };
 
 const ApiContext = createContext<ApiContextType | null>(null);
@@ -50,14 +63,23 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
         setExercises(result.data)
     }
     getData()
-    }, [])
+    }, []);
+
+
+
     //nav filter for exersise list
     const [filterExList, setFilterExList] = useState("all");
+
+
+
     //profile states for name age height and weight;
     const [name, setName] = useState<string>("");
     const [age, setAge] = useState<string>("");
     const [weight, setWeight] = useState<string>("");
     const [height, setHeight] = useState<string>("");
+
+
+
     //programs api state
     const [programs, setPrograms] = useState<Programs[]>([]);
     useEffect(() => {
@@ -68,13 +90,20 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
             setPrograms(result.programs);
         }
         getPrograms();
-    }, [])
+    }, []);
+
+
+
     //difficulty state management
     const [difficulty, setDifficulty] = useState("");
+
+
+    const [prevSessions, setPrevSessions] = useState<Sessions[]>([]);
+
     return(
 
         <ApiContext.Provider
-            value={{exercises, setExercises, filterExList, setFilterExList, name, setName, age, setAge, weight, setWeight, height, setHeight, programs, setPrograms, difficulty, setDifficulty}}// pass all useState in here so outside components can use
+            value={{exercises, setExercises, filterExList, setFilterExList, name, setName, age, setAge, weight, setWeight, height, setHeight, programs, setPrograms, difficulty, setDifficulty, prevSessions, setPrevSessions}}// pass all useState in here so outside components can use
         >
             {children}
         </ApiContext.Provider>

@@ -6,7 +6,11 @@
     grid-template-rows: 5% 10% 80% 5%;
     
     header{
+        @include header;
         align-content: center;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
     .navigation{
@@ -57,6 +61,21 @@
                 justify-content: space-between;
                 border-radius: 15px;
                 align-items: center;
+            }
+        }
+    }
+
+    .exerciseItem{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+
+        .addButton{
+            border: none;
+            border-radius: 100%;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.5);
             }
         }
     }

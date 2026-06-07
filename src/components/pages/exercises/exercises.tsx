@@ -14,7 +14,10 @@ function Exercises(){
     return(
         <>
             <section className={styles.exercise}>
-                <header>EXERCISES</header>
+                <header>
+                    <Link to="/home"><img src="/left-arrow.png" width="30px" height="30px" alt="back"/></Link>
+                    <p>EXERCISES</p>
+                </header>
                 <nav className={styles.navigation}>
                     <ul className={styles.navigationList}>
                         <li><NavLink onClick={() => setFilterExList('all')} to="">all</NavLink></li>
@@ -31,9 +34,10 @@ function Exercises(){
                         
                         {list.map(x => (
                             <li 
+                            className={styles.exerciseItem}
                             key={x.id}>
+                                <button className={styles.addButton}><img src="/plus.png" width="10px" height="10px" alt="add"/></button>
                                 <Link className={styles.exerciseCard} to={`/display/${x.id}`}>
-                                    <img height="50px" width="100px" src={x.image} alt={`${x.name} image`}/>
                                     <div>{x.name}</div>
                                 </Link>
                             </li>

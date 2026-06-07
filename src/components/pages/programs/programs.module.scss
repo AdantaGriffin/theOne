@@ -6,8 +6,10 @@
     grid-template-rows: 5% 90% 5%;
     
     header{
-        align-content: center;
         @include header;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
     .navigation{
