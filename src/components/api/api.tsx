@@ -54,10 +54,10 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
     //nav filter for exersise list
     const [filterExList, setFilterExList] = useState("all");
     //profile states for name age height and weight;
-    const [name, setName] = useState<string>('Name');
-    const [age, setAge] = useState<string>("age");
-    const [weight, setWeight] = useState<string>("weight");
-    const [height, setHeight] = useState<string>("height");
+    const [name, setName] = useState<string>("");
+    const [age, setAge] = useState<string>("");
+    const [weight, setWeight] = useState<string>("");
+    const [height, setHeight] = useState<string>("");
     //programs api state
     const [programs, setPrograms] = useState<Programs[]>([]);
     useEffect(() => {
