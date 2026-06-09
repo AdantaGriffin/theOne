@@ -76,14 +76,21 @@
         display: flex;
         gap: 5px;
         align-items: center;
-
-        .addButton{
-            border: none;
-            border-radius: 100%;
-            &:hover{
-                cursor: pointer;
-                transform: scale(1.5);
-            }
-        }
+    }
+}
+.addButton{
+    border: none;
+    border-radius: 100%;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.5);
+    }
+}
+.addBorder{
+    border: 4px solid green;
+    border-radius: 100%;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.5);
     }
 }

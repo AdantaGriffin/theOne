@@ -15,8 +15,10 @@ function Exercises(){
     const list = filterExList === 'all' ? exercises : filterByType; 
     let count = 100 / Number(sets);
 
-    console.log(count, push, routine)
+    //console.log(count, push, routine)
+    
     function addExercise(exercise: any) {
+      
       const pushCount = routine.exercises.filter(
         x => x.type2 === "push"
       ).length;
@@ -78,8 +80,8 @@ function Exercises(){
         ...prev,
         exercises: [...prev.exercises, exercise]
       }));
+
     }
-    
     return(
         <>
             <section className={styles.exercise}>
@@ -100,21 +102,37 @@ function Exercises(){
 
                 <div className={styles.listContainer}>
                     <ul className={styles.exerciseList}>
+                        {list.map(x => {
+                          const isSelected = routine.exercises.some(
+                            exercise => exercise.id === x.id
+                          );
                         
-                        {list.map(x => (
-                            <li 
-                            className={styles.exerciseItem}
-                            key={x.id}>
-                                <button 
-                                onClick={() => addExercise(x)} 
-                                className={styles.addButton}>
-                                    <img src="/plus.png" width="10px" height="10px" alt="add"/>
-                                </button>
-                                <Link className={styles.exerciseCard} to={`/display/${x.id}`}>
-                                    <div>{x.name}</div>
-                                </Link>
+                          return (
+                            <li
+                              className={styles.exerciseItem}
+                              key={x.id}
+                            >
+                              <button
+                                onClick={() => addExercise(x)}
+                                className={isSelected ? styles.addBorder : styles.addButton}
+                              >
+                                <img
+                                  src="/plus.png"
+                                  width="10px"
+                                  height="10px"
+                                  alt="add"
+                                />
+                              </button>
+                          
+                              <Link
+                                className={styles.exerciseCard}
+                                to={`/display/${x.id}`}
+                              >
+                                <div>{x.name}</div>
+                              </Link>
                             </li>
-                        ))}
+                          );
+                        })}
                     </ul>
                 </div>
 

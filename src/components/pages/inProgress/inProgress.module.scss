@@ -1,7 +1,6 @@
 @use '../../mixins' as *;
 
 .inProgress{
-    border: 1px solid red;
     height: 100svh;
     display: grid;
     grid-template-rows: 10% 90%;
@@ -13,7 +12,6 @@
         padding: 0 10px;
 
         .back{
-            border: 1px solid red;
             align-content: center;
             text-align: center;
             button{
@@ -36,13 +34,26 @@
         grid-template-rows: 15% 30% 25% 15% 15%;
 
         .name, .image, .rep, a{
-            border: 1px solid black;
             align-content: center;
             text-align: center;
         }
-
+        .name{
+            font-size: 30px;
+        }
+        .rep{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            .reps{
+                font-size: 100px;
+            }
+        }
         .done, .rest{
             @include button;
+            height: 50%;
+            width: 80%;
+            margin: auto;
         }
 
     }

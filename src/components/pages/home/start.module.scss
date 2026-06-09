@@ -33,6 +33,7 @@
             text-align: center;
             text-decoration: none;
         }
+        
 }
 .pushActive{
     background-color: green !important;
@@ -49,6 +50,12 @@
 .cardioActive{
     background-color: green !important;
 }
+
 .startActive{
-    background-color: green !important;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 90%;
+    margin: 10px auto;
+    background-color: green;
+    color: white !important;
 }

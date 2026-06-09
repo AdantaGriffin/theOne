@@ -21,6 +21,9 @@
                 margin: 10px auto;
                 a{
                     @include button;
+                &:focus{
+                    border: 4px solid green;
+                }
                 }
             }
         }

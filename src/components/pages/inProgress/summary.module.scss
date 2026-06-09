@@ -106,6 +106,7 @@
         }
         .finish{
             @include button;
+            align-content: center;
         }
     }
 

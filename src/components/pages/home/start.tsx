@@ -4,9 +4,9 @@ import Navigation from '../../navigation/navigation';
 import { useApi } from '../../api/api';
 
 function Start(){
-    const { setFilterExList, push, pull, core, legs, cardio, sets} = useApi();
+    const { setFilterExList, push, pull, core, legs, cardio, sets, rest} = useApi();
     //console.log(filterByType);
-    console.log(push)
+    console.log(rest)
     let count = 100 / Number(sets);
     return(
         <>

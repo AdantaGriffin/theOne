@@ -66,6 +66,10 @@ type ApiContextType = {
     setLegs: React.Dispatch<React.SetStateAction<boolean>>;
     cardio: boolean;
     setCardio: React.Dispatch<React.SetStateAction<boolean>>;
+    currentExerciseIndex: number;
+    setCurrentExerciseIndex: React.Dispatch<React.SetStateAction<number>>;
+    rest: number;
+    setRest: React.Dispatch<React.SetStateAction<number>>;
 };
 
 
@@ -111,7 +115,7 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
 
 
 
-    // start routine state management
+    // routine state management
     const [difficulty, setDifficulty] = useState<string>("");
     const [sets, setSets] = useState<string>("0");
     const [push, setPush] = useState<boolean>(false);
@@ -125,8 +129,8 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
           exercises: []
         }
     );
-
-
+    const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
+    const [rest, setRest] = useState(0);
 
     //previous session state management
     const [prevSessions, setPrevSessions] = useState<Sessions[]>([]);
@@ -134,7 +138,7 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
     return(
 
         <ApiContext.Provider
-            value={{exercises, setExercises, filterExList, setFilterExList, name, setName, age, setAge, weight, setWeight, height, setHeight, programs, setPrograms, difficulty, setDifficulty, prevSessions, setPrevSessions, sets, setSets, push, setPush, routine, setRoutine, pull, setPull, core, setCore, legs, setLegs, cardio, setCardio}}// pass all useState in here so outside components can use
+            value={{exercises, setExercises, filterExList, setFilterExList, name, setName, age, setAge, weight, setWeight, height, setHeight, programs, setPrograms, difficulty, setDifficulty, prevSessions, setPrevSessions, sets, setSets, push, setPush, routine, setRoutine, pull, setPull, core, setCore, legs, setLegs, cardio, setCardio, currentExerciseIndex, setCurrentExerciseIndex, rest, setRest}}// pass all useState in here so outside components can use
         >
             {children}
         </ApiContext.Provider>

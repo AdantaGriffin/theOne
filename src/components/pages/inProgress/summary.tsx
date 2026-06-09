@@ -17,7 +17,7 @@ function Summary(){
                 
                 <div className={styles.body}>
                     <div className={styles.image}>
-                        <div>image</div>
+                        <div><img src="./trophy.png" width="75px" height="90px" alt="trophy"/></div>
                         <p>GREAT WORK</p>
                     </div>
 
