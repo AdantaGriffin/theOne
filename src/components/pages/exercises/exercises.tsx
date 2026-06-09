@@ -6,7 +6,7 @@ import { useApi } from '../../api/api';
 
 function Exercises(){
     const navigate = useNavigate();
-    const {exercises, filterExList, setFilterExList, sets,  push, setPush, setPull, setCore, setLegs, setCardio, routine, setRoutine} = useApi();
+    const {exercises, filterExList, setFilterExList, sets, setPush, setPull, setCore, setLegs, setCardio, routine, setRoutine} = useApi();
     //console.log(filterExList)
     //console.log(exercises)
 

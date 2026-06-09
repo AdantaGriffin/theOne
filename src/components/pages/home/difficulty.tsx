@@ -4,7 +4,7 @@ import Navigation from '../../navigation/navigation';
 import { useApi } from '../../api/api';
 
 function Difficulty(){
-    const { difficulty, setDifficulty, sets, setSets,rest, setRest} = useApi();
+    const { difficulty, setDifficulty, setSets,rest, setRest} = useApi();
     console.log(difficulty)
     console.log(rest);
     return(
