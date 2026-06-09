@@ -1,11 +1,10 @@
 import styles from './start.module.scss';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Navigation from '../../navigation/navigation';
 import { useApi } from '../../api/api';
 
 function Start(){
-    const {exercises, filterExList, setFilterExList, push, pull, core, legs, cardio, sets} = useApi();
-    const filterByType = exercises.filter(x => x.type2 === filterExList);
+    const { setFilterExList, push, pull, core, legs, cardio, sets} = useApi();
     //console.log(filterByType);
     console.log(push)
     let count = 100 / Number(sets);
