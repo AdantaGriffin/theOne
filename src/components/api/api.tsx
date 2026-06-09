@@ -28,6 +28,11 @@ type Sessions = {
     cardio:string[];
 }
 
+type Routine = {
+  id: string;
+  exercises: Data[];
+};
+
 type ApiContextType = {
     exercises: Data[];
     setExercises: React.Dispatch<React.SetStateAction<Data[]>>;
@@ -47,7 +52,22 @@ type ApiContextType = {
     setDifficulty: React.Dispatch<React.SetStateAction<string>>;
     prevSessions: Sessions[];
     setPrevSessions: React.Dispatch<React.SetStateAction<Sessions[]>>;
+    sets: string;
+    setSets: React.Dispatch<React.SetStateAction<string>>;
+    routine: Routine;
+    setRoutine: React.Dispatch<React.SetStateAction<Routine>>;
+    push: boolean;
+    setPush: React.Dispatch<React.SetStateAction<boolean>>;
+    pull: boolean;
+    setPull: React.Dispatch<React.SetStateAction<boolean>>;
+    core: boolean;
+    setCore: React.Dispatch<React.SetStateAction<boolean>>;
+    legs: boolean;
+    setLegs: React.Dispatch<React.SetStateAction<boolean>>;
+    cardio: boolean;
+    setCardio: React.Dispatch<React.SetStateAction<boolean>>;
 };
+
 
 const ApiContext = createContext<ApiContextType | null>(null);
 
@@ -64,9 +84,6 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
     }
     getData()
     }, []);
-
-
-
     //nav filter for exersise list
     const [filterExList, setFilterExList] = useState("all");
 
@@ -94,16 +111,30 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
 
 
 
-    //difficulty state management
-    const [difficulty, setDifficulty] = useState("");
+    // start routine state management
+    const [difficulty, setDifficulty] = useState<string>("");
+    const [sets, setSets] = useState<string>("0");
+    const [push, setPush] = useState<boolean>(false);
+    const [pull, setPull] = useState<boolean>(false);
+    const [core, setCore] = useState<boolean>(false);
+    const [legs, setLegs] = useState<boolean>(false);
+    const [cardio, setCardio] = useState<boolean>(false);
+    const [routine, setRoutine] = useState<Routine>(
+        {
+          id: "",
+          exercises: []
+        }
+    );
 
 
+
+    //previous session state management
     const [prevSessions, setPrevSessions] = useState<Sessions[]>([]);
 
     return(
 
         <ApiContext.Provider
-            value={{exercises, setExercises, filterExList, setFilterExList, name, setName, age, setAge, weight, setWeight, height, setHeight, programs, setPrograms, difficulty, setDifficulty, prevSessions, setPrevSessions}}// pass all useState in here so outside components can use
+            value={{exercises, setExercises, filterExList, setFilterExList, name, setName, age, setAge, weight, setWeight, height, setHeight, programs, setPrograms, difficulty, setDifficulty, prevSessions, setPrevSessions, sets, setSets, push, setPush, routine, setRoutine, pull, setPull, core, setCore, legs, setLegs, cardio, setCardio}}// pass all useState in here so outside components can use
         >
             {children}
         </ApiContext.Provider>

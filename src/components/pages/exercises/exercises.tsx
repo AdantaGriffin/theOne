@@ -1,21 +1,90 @@
 import styles from './exercises.module.scss';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 import Navigation from '../../navigation/navigation';
 import { useApi } from '../../api/api';
 
 
 function Exercises(){
-    const {exercises, filterExList, setFilterExList} = useApi();
+    const navigate = useNavigate();
+    const {exercises, filterExList, setFilterExList, sets,  push, setPush,  pull, setPull,  core, setCore,  legs, setLegs,  cardio, setCardio, routine, setRoutine} = useApi();
     //console.log(filterExList)
     //console.log(exercises)
+
     const filterByType = exercises.filter(x => x.type2 === filterExList);
     //console.log(filterByType); list after filtering with button
     const list = filterExList === 'all' ? exercises : filterByType; 
+    let count = 100 / Number(sets);
+
+    console.log(count, push, routine)
+    function addExercise(exercise: any) {
+      const pushCount = routine.exercises.filter(
+        x => x.type2 === "push"
+      ).length;
+
+      const pullCount = routine.exercises.filter(
+        x => x.type2 === "pull"
+      ).length;
+
+      const coreCount = routine.exercises.filter(
+        x => x.type2 === "core"
+      ).length;
+
+      const legsCount = routine.exercises.filter(
+        x => x.type2 === "legs"
+      ).length;
+
+      const cardioCount = routine.exercises.filter(
+        x => x.type2 === "cardio"
+      ).length;
+
+      if (
+        exercise.type2 === "push" &&
+        pushCount + 1 === count
+      ) {
+        setPush(true);
+        navigate(-1);
+      }
+
+      if (
+        exercise.type2 === "pull" &&
+        pullCount + 1 === count
+      ) {
+        setPull(true);
+        navigate(-1);
+      }
+      if (
+        exercise.type2 === "core" &&
+        coreCount + 1 === count
+      ) {
+        setCore(true);
+        navigate(-1);
+      }
+      if (
+        exercise.type2 === "legs" &&
+        legsCount + 1 === count
+      ) {
+        setLegs(true);
+        navigate(-1);
+      }
+      if (
+        exercise.type2 === "cardio" &&
+        cardioCount + 1 === count
+      ) {
+        setCardio(true);
+        navigate(-1);
+      }
+
+      setRoutine(prev => ({
+        ...prev,
+        exercises: [...prev.exercises, exercise]
+      }));
+    }
+    
     return(
         <>
             <section className={styles.exercise}>
                 <header>
-                    <Link to="/home"><img src="/left-arrow.png" width="30px" height="30px" alt="back"/></Link>
+                    <button onClick={() => navigate(-1)}><img src="/left-arrow.png" width="30px" height="30px" alt="back"/></button>
                     <p>EXERCISES</p>
                 </header>
                 <nav className={styles.navigation}>
@@ -36,7 +105,11 @@ function Exercises(){
                             <li 
                             className={styles.exerciseItem}
                             key={x.id}>
-                                <button className={styles.addButton}><img src="/plus.png" width="10px" height="10px" alt="add"/></button>
+                                <button 
+                                onClick={() => addExercise(x)} 
+                                className={styles.addButton}>
+                                    <img src="/plus.png" width="10px" height="10px" alt="add"/>
+                                </button>
                                 <Link className={styles.exerciseCard} to={`/display/${x.id}`}>
                                     <div>{x.name}</div>
                                 </Link>

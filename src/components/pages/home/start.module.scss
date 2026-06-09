@@ -9,7 +9,9 @@
     h1{
         @include header;
     }
-
+    .body{
+        display: grid;
+    }
     .exerciseComponentList{
             align-content: center;
             height: 80%;
@@ -31,4 +33,22 @@
             text-align: center;
             text-decoration: none;
         }
+}
+.pushActive{
+    background-color: green !important;
+}
+.pullActive{
+    background-color: green !important;
+}
+.coreActive{
+    background-color: green !important;
+}
+.legsActive{
+    background-color: green !important;
+}
+.cardioActive{
+    background-color: green !important;
+}
+.startActive{
+    background-color: green !important;
 }
