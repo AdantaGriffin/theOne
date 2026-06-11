@@ -24,11 +24,25 @@
     }
 
     .frequencyGraph{
-        border: 1px solid red;
         align-content: center;
     }
     .chart{
-        border: 1px solid blue;
         align-content: center;
+        width: fit-content;
+
+        .typeCountChart{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+
+            li{
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+                width: 70px;
+                text-align: center;
+            }
+        }
     }
 }

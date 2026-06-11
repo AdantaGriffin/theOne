@@ -5,9 +5,16 @@ import { useApi } from '../../api/api';
 
 function Rest(){
     const navigate = useNavigate();
-    const {setCurrentExerciseIndex, rest, setRest, difficulty} = useApi();
-    console.log(rest)
+    const {currentExerciseIndex, setCurrentExerciseIndex, rest, setRest, routine, difficulty, pause, setPause, pushCount, pullCount, coreCount, legsCount} = useApi();
+    //console.log(rest)
+    console.log(pushCount, pullCount, coreCount, legsCount)
+    
     function continueWorkout() {
+        if (currentExerciseIndex >= routine.exercises.length - 1) {
+        navigate('/summary');
+        return;
+    }
+
         switch (difficulty) {
         case "easy":
             setRest(90);
@@ -26,7 +33,11 @@ function Rest(){
         setCurrentExerciseIndex(prev => prev + 1);
         navigate('/inProgress');
     }
+
     useEffect(() => {
+        if(pause){
+            return
+        }
         if (rest === 0){
             continueWorkout();
             return;
@@ -37,13 +48,13 @@ function Rest(){
         }, 1000);
 
         return () => clearInterval(timer);
-    }, [rest]);
+    }, [rest, pause]);
 
     return(
         <>
             <section className={styles.rest}>
                 <div className={styles.header}>
-                    <p>REST</p>
+                    <p>REST quote to be added</p>
                 </div>
                 <div className={styles.clock}>
                     <p className={styles.restCountdown}>
@@ -53,7 +64,8 @@ function Rest(){
                 <div className={styles.restButtons}>
                     <button 
                     onClick={continueWorkout}>skip</button>
-                    <div>pause</div>
+                    <button onClick={() => setPause(true)}>PAUSE</button>
+                    <button onClick={() => setPause(false)}>PLAY</button>
                 </div>
             </section>
         </>

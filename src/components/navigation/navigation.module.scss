@@ -8,19 +8,12 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        height: 50px;
-        li{
-            width: 33%;
-            border: 1px solid white;
+        .inactive{
             height: 100%;
+            width: 80px;
             align-content: center; 
             text-align: center;
-            &:hover{
-            border-radius: 15px;
-                background-color: #f7abab;
-                border-radius:initial;
-                width: 35%;
-            }
+            text-align: center;
         }
         a{
             color: #d62828;
@@ -35,4 +28,11 @@
         }
     }
     
+}
+
+.active{
+    width: 80px;
+    height: 100%;
+    text-align: center;
+    background: rgba(241, 20, 20, 0.5);
 }

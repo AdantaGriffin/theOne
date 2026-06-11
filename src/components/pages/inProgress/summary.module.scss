@@ -58,7 +58,7 @@
             height: 80%;
             margin: auto;
             display: grid;
-            grid-template-rows: 10% 90%;
+            grid-template-rows: 15% 85%;
             .header{
                 display: block;
                 height: 50px;
@@ -95,6 +95,15 @@
                     width: 49%;
                     align-content: center;
                     text-align: center;
+
+                    .typeCountChart{
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        li{
+                            border: 1px solid black;
+                        }
+                    }
                 }
                 .statGoal{
                     border-top: 1px solid black;

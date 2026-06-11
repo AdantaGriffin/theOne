@@ -7,12 +7,20 @@
     grid-template-rows: 10% 80% 10%;
 
     .header, .clock, .restButtons{
-        border: 1px solid green;
         align-content: center;
         text-align: center;
     }
+    .header{
+        border-bottom: 1px solid black;
+    }
     .restCountdown{
         font-size: 100px;
+        border: 4px solid red;
+        border-radius: 100%;
+        width: 45%;
+        height:25%;
+        margin: auto;
+        align-content: center;
     }
     .restButtons{
         display: flex;

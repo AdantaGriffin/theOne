@@ -5,8 +5,8 @@ import Navigation from '../../navigation/navigation';
 import { useApi } from '../../api/api';
 
 function Home(){
-    const {name, age, weight, height} = useApi();
-    
+    const {name, age, weight, height, stats, checkIn} = useApi();
+    console.log(stats.pushCount)
     {/*useEffect(()=> {
         async function setData(){
             if(name && age && weight && height){
@@ -60,33 +60,33 @@ function Home(){
                         <div className={styles.days}>
                             <div>
                                 <p>TOTAL</p>
-                                <p>0</p>
+                                <p>{stats.checkIn}</p>
                             </div>
                             <div>
                                 <p>CONSECUTIVE</p>
-                                <p>0</p>
+                                <p>{stats.checkIn}</p>
                             </div>
                         </div>
                         <hr className={styles.hr}></hr>
                         <div className={styles.numbers}>
                             <div className={styles.number}>
                                 <p>PUSH</p>
-                                <p>0</p>
+                                <p>{stats.pushCount}</p>
                             </div>
                             <hr></hr>
                             <div className={styles.number}>
                                 <p>PULL</p>
-                                <p>0</p>
+                                <p>{stats.pullCount}</p>
                             </div>
                             <hr></hr>
                             <div className={styles.number}>
                                 <p>CORE</p>
-                                <p>0</p>
+                                <p>{stats.coreCount}</p>
                             </div>
                             <hr></hr>
                             <div className={styles.number}>
                                 <p>LEGS</p>
-                                <p>0</p>
+                                <p>{stats.legsCount}</p>
                             </div>
                         </div>
                     </div>

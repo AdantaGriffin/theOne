@@ -4,9 +4,9 @@ import Navigation from '../../navigation/navigation';
 import { useApi } from '../../api/api';
 
 function Difficulty(){
-    const { difficulty, setDifficulty, setSets,rest, setRest} = useApi();
-    console.log(difficulty)
-    console.log(rest);
+    const { setDifficulty, setSets, setRest} = useApi();
+    //console.log(difficulty)
+    //console.log(rest);
     return(
         <>
             <section className={styles.difficulty}>

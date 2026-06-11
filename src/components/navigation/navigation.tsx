@@ -7,25 +7,25 @@ function Navigation(){
             <section className={styles.navigation}>
                 <ul className={styles.navigationList}>
                     <li>
-                        <NavLink to="/home">
+                        <NavLink className={({isActive}) => isActive ? styles.active : styles.inactive} to="/home">
                             <img src="/home.svg"/>
                             <p>home</p>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/results">
+                        <NavLink className={({isActive}) => isActive ? styles.active : styles.inactive} to="/results">
                             <img src="/stat.svg"/>
                             <p>progress</p>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/profile">
+                        <NavLink className={({isActive}) => isActive ? styles.active : styles.inactive} to="/profile">
                             <img src="/profile.svg"/>
                             <p>profile</p>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/settings">
+                        <NavLink className={({isActive}) => isActive ? styles.active : styles.inactive} to="/settings">
                             <img src="/settings.svg"/>
                             <p>settings</p>
                         </NavLink>

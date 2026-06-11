@@ -33,6 +33,14 @@ type Routine = {
   exercises: Data[];
 };
 
+type Stats = {
+    pushCount: number;
+    pullCount: number;
+    coreCount: number;
+    legsCount: number;
+    checkIn: number;
+};
+
 type ApiContextType = {
     exercises: Data[];
     setExercises: React.Dispatch<React.SetStateAction<Data[]>>;
@@ -70,6 +78,22 @@ type ApiContextType = {
     setCurrentExerciseIndex: React.Dispatch<React.SetStateAction<number>>;
     rest: number;
     setRest: React.Dispatch<React.SetStateAction<number>>;
+    routineName: string;
+    setRoutineName: React.Dispatch<React.SetStateAction<string>>;
+    pause: boolean;
+    setPause: React.Dispatch<React.SetStateAction<boolean>>;
+    checkIn: number;
+    setCheckIn: React.Dispatch<React.SetStateAction<number>>;
+    stats: Stats;
+    setStats: React.Dispatch<React.SetStateAction<Stats>>;
+    dayPushCount: number;
+    setDayPushCount: React.Dispatch<React.SetStateAction<number>>;
+    dayPullCount: number;
+    setDayPullCount: React.Dispatch<React.SetStateAction<number>>;
+    dayCoreCount: number;
+    setDayCoreCount: React.Dispatch<React.SetStateAction<number>>;
+    dayLegsCount: number;
+    setDayLegsCount: React.Dispatch<React.SetStateAction<number>>;
 };
 
 
@@ -88,18 +112,62 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
     }
     getData()
     }, []);
+
     //nav filter for exersise list
     const [filterExList, setFilterExList] = useState("all");
 
-
-
     //profile states for name age height and weight;
-    const [name, setName] = useState<string>("");
-    const [age, setAge] = useState<string>("");
-    const [weight, setWeight] = useState<string>("");
-    const [height, setHeight] = useState<string>("");
+    const [name, setName] = useState<string>(
+        () => localStorage.getItem("name") || ""
+    );
+    const [age, setAge] = useState<string>(
+        () => localStorage.getItem("age") || ""
+    );
+    const [weight, setWeight] = useState<string>(
+        () => localStorage.getItem("weight") || ""
+    );
+    const [height, setHeight] = useState<string>(
+        () => localStorage.getItem("height") || ""
+    );
 
+    // ongoing stats collection
+    const [stats, setStats] = useState<Stats>(() => {
+    const saved = localStorage.getItem("stats");
+        try {
+            return saved
+                ? JSON.parse(saved)
+                : {
+                    pushCount: 0,
+                    pullCount: 0,
+                    coreCount: 0,
+                    legsCount: 0,
+                    checkIn: 0
+                };
+        } catch {
+            return {
+                pushCount: 0,
+                pullCount: 0,
+                coreCount: 0,
+                legsCount: 0,
+                checkIn: 0
+            };
+        }
+    });
+    const [checkIn, setCheckIn] = useState<number>(
+        () => Number(localStorage.getItem("checkIn")) || 0);
+    
+    useEffect(() => {
+        localStorage.setItem("name", name);
+        localStorage.setItem("age", age);
+        localStorage.setItem("weight", weight);
+        localStorage.setItem("height", height);
+        localStorage.setItem("stats", JSON.stringify(stats));
+        localStorage.setItem("0", String(checkIn));
 
+    }, [name, age, weight, height, stats, checkIn]);
+
+    //previous session state management
+    const [prevSessions, setPrevSessions] = useState<Sessions[]>([]);
 
     //programs api state
     const [programs, setPrograms] = useState<Programs[]>([]);
@@ -112,7 +180,6 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
         }
         getPrograms();
     }, []);
-
 
 
     // routine state management
@@ -129,16 +196,19 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
           exercises: []
         }
     );
+    const [routineName, setRoutineName] = useState<string>("");
     const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
     const [rest, setRest] = useState(0);
-
-    //previous session state management
-    const [prevSessions, setPrevSessions] = useState<Sessions[]>([]);
-
+    const [pause, setPause] = useState<boolean>(false);
+    // just daily count
+    const [dayPushCount, setDayPushCount] = useState<number>(0);
+    const [dayPullCount, setDayPullCount] = useState<number>(0);
+    const [dayCoreCount, setDayCoreCount] = useState<number>(0);
+    const [dayLegsCount, setDayLegsCount] = useState<number>(0);
     return(
 
         <ApiContext.Provider
-            value={{exercises, setExercises, filterExList, setFilterExList, name, setName, age, setAge, weight, setWeight, height, setHeight, programs, setPrograms, difficulty, setDifficulty, prevSessions, setPrevSessions, sets, setSets, push, setPush, routine, setRoutine, pull, setPull, core, setCore, legs, setLegs, cardio, setCardio, currentExerciseIndex, setCurrentExerciseIndex, rest, setRest}}// pass all useState in here so outside components can use
+            value={{exercises, setExercises, filterExList, setFilterExList, name, setName, age, setAge, weight, setWeight, height, setHeight, programs, setPrograms, difficulty, setDifficulty, prevSessions, setPrevSessions, sets, setSets, push, setPush, routine, setRoutine, pull, setPull, core, setCore, legs, setLegs, cardio, setCardio, currentExerciseIndex, setCurrentExerciseIndex, rest, setRest, routineName, setRoutineName, pause, checkIn, setCheckIn, setPause, stats, setStats, dayPushCount, setDayPushCount, dayPullCount, setDayPullCount, dayCoreCount, setDayCoreCount, dayLegsCount, setDayLegsCount}}// pass all useState in here so outside components can use
         >
             {children}
         </ApiContext.Provider>

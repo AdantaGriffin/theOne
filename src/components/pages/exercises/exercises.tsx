@@ -41,11 +41,11 @@ function Exercises(){
 
       if (
         exercise.type2 === "push" &&
-        pushCount + 1 === count
+        pushCount + 1 === count 
       ) {
         setPush(true);
         navigate(-1);
-      }
+      } 
 
       if (
         exercise.type2 === "pull" &&

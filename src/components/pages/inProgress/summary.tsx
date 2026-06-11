@@ -1,8 +1,11 @@
 import styles from './summary.module.scss';
-
 import { Link } from 'react-router-dom';
+import { useApi } from '../../api/api';
 
 function Summary(){
+    const {routine, stats, routineName, checkIn, dayPushCount, dayPullCount, dayCoreCount, dayLegsCount} = useApi();
+    
+    console.log(routine.exercises.length)
     return(
         <>
             <section className={styles.summary}>
@@ -23,13 +26,15 @@ function Summary(){
 
                     <div className={styles.stats}>
                         <div className={styles.header}>
-                            <p className={styles.name}>workout name</p>
+                            <p className={styles.name}>{routineName}</p>
                             <p className={styles.date}>date</p>
                         </div>
                         <div className={styles.statsData}>
-                            <div className={styles.statEx}>exercise #</div>
-                            <div className={styles.statTot}>total exs</div>
-                            <div className={styles.statReps}>total reps</div>
+                            <div className={styles.statEx}>{stats.checkIn}</div>
+                            <div className={styles.statTot}>{routine.exercises.length} exercises</div>
+                            <div className={styles.statReps}>
+                                {dayPushCount + dayPullCount + dayCoreCount + dayLegsCount + " reps"}
+                            </div>
                             <div className={styles.statGoal}>goal completion bar</div>
                         </div>
                     </div>

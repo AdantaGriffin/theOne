@@ -6,9 +6,6 @@
     grid-template-rows: 10% 90%;
 
     .header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         padding: 0 10px;
 
         .back{
@@ -40,6 +37,10 @@
         .name{
             font-size: 30px;
         }
+        .image{
+            border-bottom: 1px solid black;
+            padding-bottom: 20px;
+        }
         .rep{
             display: flex;
             align-items: center;
@@ -49,11 +50,20 @@
                 font-size: 100px;
             }
         }
-        .done, .rest{
-            @include button;
-            height: 50%;
-            width: 80%;
-            margin: auto;
+        .userLink{
+            width: 100%;
+            text-align: center;
+            padding: 10px 0 20px 0;
+            margin-top: 10px;
+            display: grid;
+            gap: 10px;
+            .rest{
+                @include button;
+            }
+            .done{
+                @include skipNext;
+                text-decoration: none;
+            }
         }
 
     }
