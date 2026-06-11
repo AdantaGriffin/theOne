@@ -4,7 +4,7 @@ import Navigation from '../../navigation/navigation';
 import { useApi } from '../../api/api';
 
 function Start(){
-    const { setFilterExList, push, pull, core, legs, cardio, sets, rest, routine, routineName, setRoutineName, setStats, checkIn, setCheckIn} = useApi();
+    const { setFilterExList, push, pull, core, legs, cardio, sets, rest, routine, routineName, setRoutineName, setStats} = useApi();
     console.log(routineName);
     console.log(rest);
     console.log(routine);

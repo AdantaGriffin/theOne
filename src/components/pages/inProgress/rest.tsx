@@ -5,9 +5,8 @@ import { useApi } from '../../api/api';
 
 function Rest(){
     const navigate = useNavigate();
-    const {currentExerciseIndex, setCurrentExerciseIndex, rest, setRest, routine, difficulty, pause, setPause, pushCount, pullCount, coreCount, legsCount} = useApi();
+    const {currentExerciseIndex, setCurrentExerciseIndex, rest, setRest, routine, difficulty, pause, setPause} = useApi();
     //console.log(rest)
-    console.log(pushCount, pullCount, coreCount, legsCount)
     
     function continueWorkout() {
         if (currentExerciseIndex >= routine.exercises.length - 1) {

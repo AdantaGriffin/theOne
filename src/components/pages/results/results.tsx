@@ -1,6 +1,5 @@
 import styles from './results.module.scss';
 import Navigation from '../../navigation/navigation';
-import { useApi } from '../../api/api';
 
 function Results(){
     return(

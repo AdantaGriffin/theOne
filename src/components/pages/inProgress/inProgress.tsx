@@ -3,7 +3,7 @@ import { Link,} from 'react-router-dom';
 import { useApi } from '../../api/api';
 
 function InProgress(){
-    const {routine, sets, currentExerciseIndex, rest, routineName, stats, setStats, setDayPushCount, setDayPullCount, setDayCoreCount, setDayLegsCount} = useApi();
+    const {routine, sets, currentExerciseIndex, routineName, stats, setStats, setDayPushCount, setDayPullCount, setDayCoreCount, setDayLegsCount} = useApi();
     //console.log(routine.exercises[0].name)
     //console.log(rest)
     //console.log(routine)

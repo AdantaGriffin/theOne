@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useApi } from '../../api/api';
 
 function Summary(){
-    const {routine, stats, routineName, checkIn, dayPushCount, dayPullCount, dayCoreCount, dayLegsCount} = useApi();
+    const {routine, stats, routineName, dayPushCount, dayPullCount, dayCoreCount, dayLegsCount} = useApi();
     
     console.log(routine.exercises.length)
     return(
