@@ -11,6 +11,7 @@ function OnBoard(){
                 </div>
 
                 <div className={styles.body}>
+
                     <h2 className={styles.main}>
                         <p>EVERY DAY.</p>
                         <p>ONE PUNCH CLOSER.</p>

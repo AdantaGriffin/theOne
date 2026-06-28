@@ -3,9 +3,26 @@ import { Link } from 'react-router-dom';
 import { useApi } from '../../api/api';
 
 function Summary(){
-    const {routine, stats, routineName, dayPushCount, dayPullCount, dayCoreCount, dayLegsCount} = useApi();
+    const {routine, stats, routineName, dayPushCount, dayPullCount, dayCoreCount, dayLegsCount, prevSessions, setPrevSessions, sets} = useApi();
     
     console.log(routine.exercises.length)
+    console.log(routine)
+    console.log(prevSessions)
+
+    const saveRoutine = () => {
+    if (routine.exercises.length === 0) return;
+
+    const session = {
+        id: Date.now().toString(),
+        name: routineName,
+        date: new Date().toLocaleDateString(),
+        stats,
+        routine,
+        sets: sets,
+    };
+
+    setPrevSessions(prev => [...prev, session]);
+};
     return(
         <>
             <section className={styles.summary}>
@@ -27,7 +44,7 @@ function Summary(){
                     <div className={styles.stats}>
                         <div className={styles.header}>
                             <p className={styles.name}>{routineName}</p>
-                            <p className={styles.date}>date</p>
+                            <p className={styles.date}>{new Date().toLocaleDateString()}</p>
                         </div>
                         <div className={styles.statsData}>
                             <div className={styles.statEx}>{stats.checkIn}</div>
@@ -39,7 +56,10 @@ function Summary(){
                         </div>
                     </div>
 
-                    <Link className={styles.finish} to="/home">finish</Link>
+                    <Link 
+                    onClick={saveRoutine}
+                    className={styles.finish} to="/home"
+                    >finish</Link>
 
                 </div>
             </section>

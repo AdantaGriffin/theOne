@@ -6,17 +6,9 @@ import { useApi } from '../../api/api';
 
 function Home(){
     const {name, age, weight, height, stats} = useApi();
-    console.log(stats.pushCount)
-    {/*useEffect(()=> {
-        async function setData(){
-            if(name && age && weight && height){
-            setName(name);
-            setAge(age);
-            setWeight(weight);
-            setHeight(height)}
-        }
-        setData();
-    }, [])*/}
+    //console.log(stats.pushCount)
+    //console.log(prevSessions);
+    
     return(
         <>
             <section className={styles.home}>
@@ -57,6 +49,7 @@ function Home(){
                     </div>
 
                     <div className={styles.userStats}>
+
                         <div className={styles.days}>
                             <div>
                                 <p>TOTAL</p>
@@ -67,7 +60,9 @@ function Home(){
                                 <p>{stats.checkIn}</p>
                             </div>
                         </div>
+
                         <hr className={styles.hr}></hr>
+
                         <div className={styles.numbers}>
                             <div className={styles.number}>
                                 <p>PUSH</p>
@@ -89,6 +84,7 @@ function Home(){
                                 <p>{stats.legsCount}</p>
                             </div>
                         </div>
+
                     </div>
 
                     <div className={styles.userTabs}>
@@ -101,6 +97,7 @@ function Home(){
                 </div>
                 
                 <Navigation/>
+                
             </section>
         </>
     )

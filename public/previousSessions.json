@@ -4,21 +4,13 @@
             "id":"1",
             "name":"Day 1",
             "date":"",
-            "push":[],
-            "pull":[],
-            "core":[],
-            "legs":[],
-            "cardio":[]
+            "routine":[]
         },
         {
             "id":"2",
             "name":"Follow up",
             "date":"",
-            "push":[],
-            "pull":[],
-            "core":[],
-            "legs":[],
-            "cardio":[]
+            "routine":[]
         }
     ]
 }

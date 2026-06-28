@@ -6,13 +6,14 @@ import { useApi } from '../../api/api';
 
 function Prev(){
     const {prevSessions, setPrevSessions} = useApi();
-    //console.log(prevSessions)
+    console.log(prevSessions)
+
     useEffect(() => {
         async function getPrevSessions(){
-            const response = await fetch('/previousSessions.json');
+            const response = await fetch("http://localhost:3001/previousSessions");
             const result = await response.json();
-            console.log(result.previousSessions)
-            setPrevSessions(result.previousSessions);
+            console.log(result)
+            setPrevSessions(result);
         }
         getPrevSessions()
     }, []);
@@ -25,13 +26,13 @@ function Prev(){
                 </header>
                 
                 <ul className={styles.routineHistoryList}>
-                    {prevSessions.length > 1 ? prevSessions.map(x => (
+                    {prevSessions.length ? prevSessions.map(x => (
                         <li
                         key={x.id} 
                         className={styles.routine}>
                             <NavLink
                             className={styles.routineCard}
-                            to="">
+                            to={`/previous/${x.id}`}>
                                 <div>{x.name}</div>
                                 <div>
                                     <p className={styles.date}>{x.date}</p>

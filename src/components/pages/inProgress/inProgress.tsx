@@ -6,8 +6,8 @@ function InProgress(){
     const {routine, sets, currentExerciseIndex, routineName, stats, setStats, setDayPushCount, setDayPullCount, setDayCoreCount, setDayLegsCount} = useApi();
     //console.log(routine.exercises[0].name)
     //console.log(rest)
-    //console.log(routine)
-    console.log(stats)
+    console.log(routine)
+    //console.log(stats)
     const currentExercise = routine?.exercises[currentExerciseIndex];
     //console.log(currentExercise.type2)
     //add 

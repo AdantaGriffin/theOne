@@ -21,11 +21,9 @@ type Sessions = {
     id: string;
     name: string;
     date: string;
-    push:string[];
-    pull:string[];
-    core:string[];
-    legs:string[];
-    cardio:string[];
+    stats: Stats;
+    routine: Routine;
+    sets: string;
 }
 
 type Routine = {
@@ -155,7 +153,9 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
     });
     const [checkIn, setCheckIn] = useState<number>(
         () => Number(localStorage.getItem("checkIn")) || 0);
-    
+    const [sets, setSets] = useState<string>(
+        () => localStorage.getItem("sets") || "0"
+    );
     useEffect(() => {
         localStorage.setItem("name", name);
         localStorage.setItem("age", age);
@@ -163,11 +163,26 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
         localStorage.setItem("height", height);
         localStorage.setItem("stats", JSON.stringify(stats));
         localStorage.setItem("0", String(checkIn));
+        localStorage.setItem("sets", sets);
 
-    }, [name, age, weight, height, stats, checkIn]);
+    }, [name, age, weight, height, stats, checkIn, sets]);
 
     //previous session state management
-    const [prevSessions, setPrevSessions] = useState<Sessions[]>([]);
+    const [prevSessions, setPrevSessions] = useState<Sessions[]>  (() => {
+        const saved = localStorage.getItem("prevSessions");
+
+        try {
+            return saved ? JSON.parse(saved) : [];
+        } catch {
+            return [];
+        }
+    });
+    useEffect(() => {
+        localStorage.setItem(
+            "prevSessions",
+            JSON.stringify(prevSessions)
+        );
+    }, [prevSessions]);
 
     //programs api state
     const [programs, setPrograms] = useState<Programs[]>([]);
@@ -184,7 +199,6 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
 
     // routine state management
     const [difficulty, setDifficulty] = useState<string>("");
-    const [sets, setSets] = useState<string>("0");
     const [push, setPush] = useState<boolean>(false);
     const [pull, setPull] = useState<boolean>(false);
     const [core, setCore] = useState<boolean>(false);

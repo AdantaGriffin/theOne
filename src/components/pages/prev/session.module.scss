@@ -1,0 +1,40 @@
+.session{
+    min-height: 100svh;
+    display: grid;
+    grid-template-rows: 10% 10% 15% 10% 45% 10%;
+
+
+    .name{
+        align-content: center;
+    }
+    .date{
+        align-content: center;
+    }
+    .reps{
+        font-size: 26px;
+        align-content: center;
+        text-align: center;
+    }
+    .text{
+        align-content: center;
+    }
+    .exercises{
+        align-content: center;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 10px;
+        margin: 0;
+        overflow-x: scroll;
+
+        li{
+            margin-left: 10px;
+        }
+    }
+    .comment{
+        font-size: 26px;
+        text-align: center;
+        align-content: center;
+        color: red;
+    }
+}

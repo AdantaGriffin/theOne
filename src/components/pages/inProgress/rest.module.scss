@@ -1,7 +1,6 @@
 @use '../../mixins' as *;
 
 .rest{
-    border: 1px solid red;
     height: 100svh;
     display: grid;
     grid-template-rows: 10% 80% 10%;

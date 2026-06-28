@@ -4,7 +4,7 @@ import { useApi } from '../../api/api';
 
 function ObStart(){
     const {name, setName, age, setAge, height, setHeight, weight, setWeight} = useApi();
-    console.log(name, age, weight, height)
+    //console.log(name, age, weight, height)
     return(
         <>
             <section className={styles.obStart}>

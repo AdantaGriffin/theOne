@@ -10,6 +10,7 @@ import Start from './components/pages/home/start';
 import Exercises from './components/pages/exercises/exercises';
 import Display from './components/pages/exercises/display';
 import Prev from './components/pages/prev/prev';
+import Session from './components/pages/prev/session';
 import Programs from './components/pages/programs/programs';
 import ProgramDetails from './components/pages/programs/programDetail';
 import InProgress from './components/pages/inProgress/inProgress';
@@ -32,6 +33,7 @@ const AppRouter = createBrowserRouter(createRoutesFromElements(
     <Route path="exercises" element={<Exercises/>}/>
     <Route path="display/:id" element={<Display/>}/>
     <Route path="previous" element={<Prev/>}/>
+    <Route path="previous/:id" element={<Session/>}/>
     <Route path="programs" element={<Programs/>}/>
     <Route path="programDetails/:id" element={<ProgramDetails/>}/>
     <Route path="inProgress" element={<InProgress/>}/>
