@@ -9,6 +9,8 @@ function Display(){
     //console.log(exercises[0]?.id);
     const filter = exercises.filter(x => x.id === Number(id));
     console.log(filter)
+
+    
     return(
         <>
             <section className={styles.display}>

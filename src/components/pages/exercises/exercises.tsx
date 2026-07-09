@@ -44,7 +44,7 @@ function Exercises(){
         pushCount + 1 === count 
       ) {
         setPush(true);
-        navigate(-1);
+        navigate("/start");
       } 
 
       if (
@@ -52,28 +52,28 @@ function Exercises(){
         pullCount + 1 === count
       ) {
         setPull(true);
-        navigate(-1);
+        navigate("/start");
       }
       if (
         exercise.type2 === "core" &&
         coreCount + 1 === count
       ) {
         setCore(true);
-        navigate(-1);
+        navigate("/start");
       }
       if (
         exercise.type2 === "legs" &&
         legsCount + 1 === count
       ) {
         setLegs(true);
-        navigate(-1);
+        navigate("/start");
       }
       if (
         exercise.type2 === "cardio" &&
         cardioCount + 1 === count
       ) {
         setCardio(true);
-        navigate(-1);
+        navigate("/start");
       }
 
       setRoutine(prev => ({
