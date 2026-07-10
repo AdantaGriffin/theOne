@@ -6,7 +6,7 @@ import Navigation from '../../navigation/navigation';
 function Display(){
     const navigate = useNavigate();
     const {id} = useParams();
-    const {exercises, filterExList, setFilterExList, sets, setPush, setPull, setCore, setLegs, setCardio, routine, setRoutine} = useApi();
+    const {exercises, sets, setPush, setPull, setCore, setLegs, setCardio, routine, setRoutine} = useApi();
     //console.log(exercises[0]?.id);
     const filter = exercises.filter(x => x.id === Number(id));
     console.log(filter)
